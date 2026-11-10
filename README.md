@@ -4,7 +4,7 @@ MTMwork（サイト・LP制作／ショート動画／バナー・SNS画像）�
 
 ## 構成
 - `index.html` — ページ本体
-- `assets/` — 動画3本（MP4）・画像9点
+- `assets/mtmwork-assets/` — 動画3本（MP4）・画像9点
 
 ## GitHubへの置き方
 ```bash
