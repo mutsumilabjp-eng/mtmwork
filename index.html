@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="MTMworkのポートフォリオ。サイト・LP制作、ショート動画、バナー・SNS画像の制作実績と作例を紹介します。" />
+    <link rel="icon" href="data:," />
+    <title>MTMwork｜ポートフォリオ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        /* 色（仕様書 §2・§8） */
+        --c-bg: #F6F2E9;
+        --c-surface: #FBF9F4;
+        --c-text: #23201A;
+        --c-text-sub: #6A6458;
+        --c-accent: #2C4A66;
+        --c-rule: #D8D1C0;
+        --c-video: #1C1A16;
+
+        /* 書体（仕様書 §3・§8） */
+        --f-head: "Shippori Mincho B1", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+        --f-body: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+
+        /* サイズ */
+        --fs-name: 36px;
+        --fs-catch: 30px;
+        --fs-h2: 26px;
+        --fs-h3: 20px;
+        --fs-body: 16px;
+        --fs-small: 13px;
+
+        /* 間隔 */
+        --sp-section: 112px;
+
+        /* レイアウト */
+        --w-container: 880px;
+        --pad-x: 40px;
+      }
+      @media (max-width: 899px) {
+        :root { --pad-x: 32px; }
+      }
+      @media (max-width: 599px) {
+        :root {
+          --fs-name: 30px;
+          --fs-catch: 22px;
+          --fs-h2: 21px;
+          --fs-h3: 18px;
+          --fs-body: 15px;
+          --fs-small: 12.5px;
+          --sp-section: 72px;
+          --pad-x: 20px;
+        }
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--c-bg);
+        color: var(--c-text);
+        font-family: var(--f-body);
+        font-size: var(--fs-body);
+        line-height: 1.95;
+        letter-spacing: 0.03em;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap {
+        max-width: var(--w-container);
+        margin: 0 auto;
+        padding: 0 var(--pad-x) 64px;
+      }
+      a, button, summary {
+        transition: color 0.2s, background-color 0.2s;
+      }
+      a:focus-visible, button:focus-visible, summary:focus-visible {
+        outline: 2px solid var(--c-accent);
+        outline-offset: 2px;
+      }
+
+      /* ---------- ファーストビュー（§5-1） ---------- */
+      .hero {
+        text-align: center;
+        padding: 96px 0 88px;
+      }
+      .avatar {
+        width: 112px;
+        height: 112px;
+        margin: 0 auto;
+        border-radius: 50%;
+        display: block;
+        object-fit: cover;
+        background: var(--c-surface);
+        border: 1px solid var(--c-rule);
+      }
+      .hero h1 {
+        margin: 24px 0 0;
+        font-family: var(--f-head);
+        font-size: var(--fs-name);
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: 0.08em;
+        font-feature-settings: "palt";
+      }
+      .hero .title {
+        margin: 8px 0 0;
+        color: var(--c-text-sub);
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.12em;
+      }
+      .hero .rule-v {
+        width: 1px;
+        height: 40px;
+        background: var(--c-rule);
+        margin: 40px auto;
+      }
+      .hero .catch {
+        margin: 0 auto;
+        font-family: var(--f-head);
+        font-size: var(--fs-catch);
+        font-weight: 500;
+        line-height: 1.7;
+        letter-spacing: 0.04em;
+        font-feature-settings: "palt";
+        word-break: keep-all;
+        overflow-wrap: anywhere;
+      }
+
+      /* ---------- セクション共通（§4） ---------- */
+      section { margin-top: var(--sp-section); }
+      section.bordered { border-top: 1px solid var(--c-rule); }
+      .sec-head {
+        border-bottom: 1px solid var(--c-rule);
+        padding-bottom: 14px;
+        margin-bottom: 32px;
+      }
+      .sec-head h2 {
+        margin: 0;
+        font-family: var(--f-head);
+        font-size: var(--fs-h2);
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 0.06em;
+      }
+      .lead {
+        margin: 0 0 8px;
+        max-width: 38em;
+        color: var(--c-text-sub);
+      }
+
+      /* ---------- サービス3件：罫線区切りリスト（§5-2） ---------- */
+      .skills { border-bottom: 1px solid var(--c-rule); }
+      .skill {
+        display: grid;
+        grid-template-columns: 220px minmax(0, 1fr);
+        column-gap: 40px;
+        border-top: 1px solid var(--c-rule);
+        padding: 32px 0;
+      }
+      .skill .num {
+        display: block;
+        font-family: var(--f-head);
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--c-text-sub);
+        margin-bottom: 8px;
+      }
+      .skill h3 {
+        margin: 0;
+        font-family: var(--f-head);
+        font-size: var(--fs-h3);
+        font-weight: 700;
+        line-height: 1.6;
+        letter-spacing: 0.04em;
+      }
+      .skill p {
+        margin: 0;
+        max-width: 38em;
+      }
+      .skill .more {
+        display: inline-block;
+        margin-top: 16px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.08em;
+        color: var(--c-accent);
+        text-decoration: underline;
+        text-decoration-color: var(--c-accent);
+        text-underline-offset: 6px;
+      }
+      .skill .more:hover {
+        color: var(--c-text);
+        text-decoration-color: var(--c-text);
+      }
+
+      /* ---------- 作品グループ見出し（§5-3） ---------- */
+      .sub-head {
+        margin: 72px 0 28px;
+        border-top: 2px solid var(--c-text);
+        padding-top: 22px;
+        font-family: var(--f-head);
+        font-size: var(--fs-h3);
+        font-weight: 700;
+        line-height: 1.6;
+        letter-spacing: 0.04em;
+        scroll-margin-top: 24px;
+      }
+      #works-sites { scroll-margin-top: 24px; }
+
+      /* ---------- 作品（サイト） ---------- */
+      .works { display: grid; gap: 56px; }
+      .site-shot {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--c-rule);
+      }
+      .site-meta {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 6px 14px;
+        margin-top: 12px;
+      }
+      .site-name {
+        margin: 0;
+        font-family: var(--f-head);
+        font-size: var(--fs-h3);
+        font-weight: 700;
+        line-height: 1.6;
+        letter-spacing: 0.04em;
+      }
+      .site-work .tag {
+        font-size: var(--fs-small);
+        line-height: 1.7;
+        letter-spacing: 0.05em;
+        color: var(--c-text-sub);
+      }
+      .site-work details { margin-top: 16px; }
+      .site-work summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 52px;
+        border-top: 1px solid var(--c-rule);
+        border-bottom: 1px solid var(--c-rule);
+        cursor: pointer;
+        list-style: none;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        color: var(--c-text);
+      }
+      .site-work summary::-webkit-details-marker { display: none; }
+      .site-work summary:hover { background: var(--c-surface); }
+      .site-work .d-label::before { content: "詳細を見る"; }
+      .site-work details[open] .d-label::before { content: "詳細を閉じる"; }
+      .site-work .d-sign {
+        font-family: var(--f-head);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1;
+      }
+      .site-work .d-sign::before { content: "＋"; }
+      .site-work details[open] .d-sign::before { content: "－"; }
+      .site-body {
+        background: var(--c-surface);
+        border-bottom: 1px solid var(--c-rule);
+        padding: 24px;
+      }
+      .site-body p {
+        margin: 0;
+        max-width: 38em;
+      }
+      .site-body .open {
+        margin-top: 24px;
+        display: inline-flex;
+        align-items: center;
+        height: 48px;
+        padding: 0 28px;
+        background: var(--c-accent);
+        color: var(--c-surface);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+      }
+      .site-body .open:hover { background: var(--c-text); }
+
+      /* ---------- 作品（ショート動画） ---------- */
+      .shorts {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        align-items: start;
+      }
+      .short { margin: 0; min-width: 0; }
+      .short .frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        overflow: hidden;
+        background: var(--c-video);
+        border: 1px solid var(--c-rule);
+      }
+      .short .frame video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 0;
+        display: block;
+        background: var(--c-video);
+      }
+      .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 56px;
+        height: 56px;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(251, 249, 244, 0.92);
+        color: var(--c-accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0;
+      }
+      .play-btn:hover { background: #ffffff; }
+      .play-btn svg { margin-left: 2px; }
+      .play-btn[hidden] { display: none; }
+      .short .frame.is-playing .play-btn { display: none; }
+      .play-error {
+        position: absolute;
+        inset: 0;
+        background: rgba(28, 26, 22, 0.92);
+        color: var(--c-surface);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+        padding: 18px;
+      }
+      .play-error[hidden] { display: none; }
+      .play-error p { margin: 0; font-size: 13.5px; line-height: 1.6; }
+      .play-error a {
+        color: var(--c-surface);
+        font-size: 14px;
+        font-weight: 500;
+        border: 1px solid var(--c-surface);
+        padding: 7px 16px;
+        text-decoration: none;
+      }
+      .play-error a:hover { text-decoration: underline; }
+      .short figcaption {
+        margin-top: 12px;
+        font-family: var(--f-head);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.6;
+        letter-spacing: 0.04em;
+      }
+
+      /* ---------- 作品（バナー・SNS画像） ---------- */
+      .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: start;
+      }
+      .g-item { margin: 0; }
+      .g-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border: 1px solid var(--c-rule);
+      }
+      .g-item figcaption {
+        margin-top: 10px;
+        font-size: var(--fs-small);
+        line-height: 1.7;
+        letter-spacing: 0.05em;
+        color: var(--c-text-sub);
+      }
+
+      /* ---------- About（§5-4） ---------- */
+      .about-head {
+        border-top: 2px solid var(--c-text);
+        padding-top: 22px;
+      }
+      .about p {
+        margin: 0 0 1.2em;
+      }
+      .about p:last-of-type { margin-bottom: 0; }
+      .about-list {
+        margin: 56px 0 0;
+        border-bottom: 1px solid var(--c-rule);
+      }
+      .about-row {
+        display: grid;
+        grid-template-columns: 160px minmax(0, 1fr);
+        column-gap: 32px;
+        border-top: 1px solid var(--c-rule);
+        padding: 20px 0;
+      }
+      .about-row dt {
+        font-family: var(--f-head);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.7;
+        letter-spacing: 0.04em;
+      }
+      .about-row dd {
+        margin: 0;
+      }
+
+      footer {
+        margin-top: var(--sp-section);
+        border-top: 1px solid var(--c-rule);
+        padding-top: 24px;
+        font-size: var(--fs-small);
+        letter-spacing: 0.05em;
+        color: var(--c-text-sub);
+      }
+
+      /* ---------- 上部へ戻るボタン（§6） ---------- */
+      .to-top {
+        position: fixed;
+        right: calc(28px + env(safe-area-inset-right, 0px));
+        bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+        z-index: 50;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: 1px solid var(--c-rule);
+        border-radius: 50%;
+        background: var(--c-bg);
+        color: var(--c-text);
+        font-size: 16px;
+        line-height: 1;
+        opacity: 0.85;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .to-top:hover, .to-top:focus-visible { opacity: 1; }
+      .to-top:hover {
+        background: var(--c-text);
+        color: var(--c-surface);
+      }
+
+      /* ---------- スマホ（〜599px） ---------- */
+      @media (max-width: 599px) {
+        .hero { padding: 64px 0 56px; }
+        .avatar { width: 96px; height: 96px; }
+        .hero .title { font-size: 13px; }
+        .skill {
+          grid-template-columns: 1fr;
+          row-gap: 12px;
+        }
+        .sub-head { margin-top: 56px; }
+        .site-body { padding: 24px 16px; }
+        .site-body .open { width: 100%; justify-content: center; }
+        .shorts {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .short {
+          width: 280px;
+          margin: 0 auto;
+        }
+        .gallery { grid-template-columns: 1fr; }
+        .about-row {
+          grid-template-columns: 1fr;
+          row-gap: 6px;
+        }
+        .to-top {
+          right: calc(20px + env(safe-area-inset-right, 0px));
+          bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        a, button, summary { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+
+      <!-- ファーストビュー -->
+      <header class="hero">
+        <img class="avatar" src="assets/avatar.png" alt="MTMworkのプロフィールイラスト" width="200" height="200" />
+        <h1>MTMwork</h1>
+        <p class="title">AIを活用したWeb・動画・画像制作</p>
+        <div class="rule-v" aria-hidden="true"></div>
+        <p class="catch">サイト・動画・バナーを、<br />AIの活用と人の仕上げで、2日を基本に納品します</p>
+      </header>
+
+      <!-- サービス紹介 -->
+      <section aria-label="サービス紹介">
+        <div class="skills">
+          <article class="skill">
+            <div>
+              <span class="num">一</span>
+              <h3>サイト・LP制作</h3>
+            </div>
+            <div>
+              <p>企画・構成・デザイン・実装まで対応します。広告流入や問い合わせなど、目的に沿った導線設計を重視します。納期は2日を基本とし、修正は2回まで対応します。</p>
+              <a class="more" href="#works-sites">作品例を見る →</a>
+            </div>
+          </article>
+          <article class="skill">
+            <div>
+              <span class="num">二</span>
+              <h3>ショート動画</h3>
+            </div>
+            <div>
+              <p>台本作成から編集まで対応します。CapCutとClaude Codeを使用します。アニメーションのみの制作、および撮影が必要な案件は対応外です。</p>
+              <a class="more" href="#works-shorts">作品例を見る →</a>
+            </div>
+          </article>
+          <article class="skill">
+            <div>
+              <span class="num">三</span>
+              <h3>バナー・SNS画像</h3>
+            </div>
+            <div>
+              <p>ChatGPTとCanvaで制作し、PNGで納品します。色は3色以内に絞り、スマホで読める文字設計をルールにしています。</p>
+              <a class="more" href="#works-banners">作品例を見る →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 作品 -->
+      <section id="works" aria-labelledby="works-h">
+        <div class="sec-head">
+          <h2 id="works-h">作品</h2>
+        </div>
+        <p class="lead">制作したサイトのスクリーンショットです。気になる作品は開くと、詳しい説明とサイトへのリンクが表示されます。</p>
+        <div class="works" id="works-sites">
+          <div class="site-work">
+            <img class="site-shot" src="assets/img-1.jpg" alt="海外eSIM確認サイトのトップページのスクリーンショットです" width="859" height="760" loading="lazy" />
+            <div class="site-meta">
+              <h3 class="site-name">海外eSIM確認サイト</h3>
+              <span class="tag">LP制作</span>
+            </div>
+            <details>
+              <summary><span class="d-label"></span><span class="d-sign" aria-hidden="true"></span></summary>
+              <div class="site-body">
+                <p>海外旅行者向けに、eSIMの購入前の確認から、購入後の設定・接続トラブルの解決までを1つのサイトにまとめました。入口は、旅行条件からの4問診断（購入前）、設定と接続の確認（購入後）、困った場面からの逆引きの3つに分けています。文章・構成・デザイン・実装まで一貫して担当しました。</p>
+                <a class="open" href="https://overseas-esim-check.pages.dev/" target="_blank" rel="noopener noreferrer">サイトを見る ↗</a>
+              </div>
+            </details>
+          </div>
+          <div class="site-work">
+            <img class="site-shot" src="assets/img-2.jpg" alt="相続情報サイトのトップページのスクリーンショットです" width="859" height="760" loading="lazy" />
+            <div class="site-meta">
+              <h3 class="site-name">相続情報サイト</h3>
+              <span class="tag">Webサイト制作</span>
+            </div>
+            <details>
+              <summary><span class="d-label"></span><span class="d-sign" aria-hidden="true"></span></summary>
+              <div class="site-body">
+                <p>相続の聞き書きを仕事にしている人の情報サイトです。家族の話を聞いて整理する活動を、記事コンテンツと無料の5問チェックで伝える構成にしました。企画・構成・デザイン・実装まで一貫して担当し、記事から無料チェック、そして相談先の検討へと進む導線を設計しています。煽らない文章トーンを全体で統一しました。</p>
+                <a class="open" href="https://saeki-souzoku.com/" target="_blank" rel="noopener noreferrer">サイトを見る ↗</a>
+              </div>
+            </details>
+          </div>
+          <div class="site-work">
+            <img class="site-shot" src="assets/img-3.jpg" alt="転職情報サイトのトップページのスクリーンショットです" width="859" height="760" loading="lazy" />
+            <div class="site-meta">
+              <h3 class="site-name">転職情報サイト</h3>
+              <span class="tag">動きのあるLP</span>
+            </div>
+            <details>
+              <summary><span class="d-label"></span><span class="d-sign" aria-hidden="true"></span></summary>
+              <div class="site-body">
+                <p>転職を考える人向けに、求人票の読み解き方をまとめた、動きのあるLPです。「人柄重視」「風通しの良い職場」など求人票によく見られる表現を取り上げ、面接で確認したい質問に置き換える構成にしました。先に見る3つの確認ポイントから、転職エージェントに相談する流れへ進む導線を設計しています。</p>
+                <a class="open" href="https://sato-job.app1008.workers.dev/" target="_blank" rel="noopener noreferrer">サイトを見る ↗</a>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <h3 class="sub-head" id="works-shorts">ショート動画</h3>
+        <div class="shorts">
+          <figure class="short">
+            <div class="frame">
+              <video src="assets/short-1.mp4" poster="assets/img-4.jpg" controls playsinline preload="none" aria-label="職場あるあるショート"></video>
+              <button type="button" class="play-btn" aria-label="職場あるあるショートを再生する">
+                <svg width="16" height="18" viewBox="0 0 16 18" fill="currentColor" aria-hidden="true"><path d="M3 1.8v14.4L15 9z"/></svg>
+              </button>
+              <div class="play-error" hidden>
+                <p>この環境では動画を再生できませんでした</p>
+                <a href="assets/short-1.mp4">動画ファイルを開く</a>
+              </div>
+            </div>
+            <figcaption>職場あるあるショート</figcaption>
+          </figure>
+          <figure class="short">
+            <div class="frame">
+              <video src="assets/short-2.mp4" poster="assets/img-5.jpg" controls playsinline preload="none" aria-label="雷が落ちたカード"></video>
+              <button type="button" class="play-btn" aria-label="雷が落ちたカードを再生する">
+                <svg width="16" height="18" viewBox="0 0 16 18" fill="currentColor" aria-hidden="true"><path d="M3 1.8v14.4L15 9z"/></svg>
+              </button>
+              <div class="play-error" hidden>
+                <p>この環境では動画を再生できませんでした</p>
+                <a href="assets/short-2.mp4">動画ファイルを開く</a>
+              </div>
+            </div>
+            <figcaption>雷が落ちたカード</figcaption>
+          </figure>
+          <figure class="short">
+            <div class="frame">
+              <video src="assets/short-3.mp4" poster="assets/img-6.jpg" controls playsinline preload="none" aria-label="美白美容液ショート"></video>
+              <button type="button" class="play-btn" aria-label="美白美容液ショートを再生する">
+                <svg width="16" height="18" viewBox="0 0 16 18" fill="currentColor" aria-hidden="true"><path d="M3 1.8v14.4L15 9z"/></svg>
+              </button>
+              <div class="play-error" hidden>
+                <p>この環境では動画を再生できませんでした</p>
+                <a href="assets/short-3.mp4">動画ファイルを開く</a>
+              </div>
+            </div>
+            <figcaption>美白美容液ショート</figcaption>
+          </figure>
+        </div>
+
+        <h3 class="sub-head" id="works-banners">バナー・SNS画像</h3>
+        <div class="gallery">
+          <figure class="g-item">
+            <img src="assets/img-7.jpg" alt="カフェのSNS投稿画像の作例です" loading="lazy" />
+            <figcaption>カフェのSNS投稿画像</figcaption>
+          </figure>
+          <figure class="g-item">
+            <img src="assets/banner-nagi.jpg" alt="「朝に見る優先順位」と題した正方形の投稿バナーの作例です" loading="lazy" />
+            <figcaption>朝に見る優先順位</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section aria-labelledby="about-h">
+        <div class="sec-head about-head">
+          <h2 id="about-h">About</h2>
+        </div>
+        <div class="about">
+          <p>飲食店のキッチンで働きながら、副業でサイト・動画・画像の制作をしています。</p>
+          <p>AIで下書きと実装を進め、文章の表現と内容の事実確認は自分で行い、仕上げます。</p>
+          <p>作って終わりにせず、公開後の導線まで見据えた設計を心がけています。</p>
+          <dl class="about-list">
+            <div class="about-row">
+              <dt>対応時間</dt>
+              <dd>11〜18時です（週10〜20時間）返信は朝と夕方にまとめて確認します</dd>
+            </div>
+            <div class="about-row">
+              <dt>進め方</dt>
+              <dd>構成案を先に共有し、方向性を確認してから仕上げます</dd>
+            </div>
+            <div class="about-row">
+              <dt>納期・修正</dt>
+              <dd>納期は2日を基本とし、修正は2回まで対応します</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <footer>© MTMwork</footer>
+    </div>
+    <button type="button" class="to-top" id="toTop" aria-label="ページの上部に戻る" title="上部に戻る">↑</button>
+    <script>
+      (function () {
+        var toTop = document.getElementById("toTop");
+        if (toTop) {
+          toTop.addEventListener("click", function () {
+            var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+          });
+        }
+      })();
+    </script>
+    <script>
+      (function () {
+        var frames = document.querySelectorAll(".short .frame");
+        Array.prototype.forEach.call(frames, function (frame) {
+          var video = frame.querySelector("video");
+          var btn = frame.querySelector(".play-btn");
+          var err = frame.querySelector(".play-error");
+          if (!video || !btn) return;
+          var watchdog = null;
+          function showError() {
+            if (watchdog) { clearTimeout(watchdog); watchdog = null; }
+            btn.hidden = true;
+            if (err) err.hidden = false;
+          }
+          btn.addEventListener("click", function () {
+            try {
+              var p = video.play();
+              if (p && typeof p.catch === "function") {
+                p.catch(function () {});
+              }
+            } catch (e) {}
+            if (watchdog) clearTimeout(watchdog);
+            watchdog = setTimeout(function () {
+              if (video.paused && video.currentTime === 0 && !frame.classList.contains("is-playing")) {
+                showError();
+              }
+            }, 8000);
+          });
+          video.addEventListener("playing", function () {
+            if (watchdog) { clearTimeout(watchdog); watchdog = null; }
+            frame.classList.add("is-playing");
+          });
+          video.addEventListener("error", showError, true);
+        });
+      })();
+    </script>
+  </body>
+</html>
