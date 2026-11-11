@@ -336,6 +336,46 @@
         font-size: 14px;
       }
 
+      .plot-sample .plot-intro,
+      .plot-sample .plot-characters {
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: var(--c-text-sub);
+      }
+      .plot-scene {
+        margin-top: 28px;
+        padding-top: 24px;
+        border-top: 1px solid var(--c-rule);
+      }
+      .plot-scene h5 {
+        margin: 0 0 20px;
+        font-family: var(--f-head);
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.6;
+        color: var(--c-accent);
+      }
+      .plot-scene p {
+        margin: 0 0 13px;
+        line-height: 1.95;
+      }
+      .plot-scene .plot-dialogue {
+        padding-left: 16px;
+        border-left: 2px solid var(--c-rule);
+        margin: 18px 0;
+      }
+      .plot-scene .plot-dialogue strong {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--c-text-sub);
+      }
+      .plot-scene .plot-dialogue br { display: block; content: ""; margin-bottom: 5px; }
+      .plot-ending { margin-bottom: 8px; }
+      @media (max-width: 599px) {
+        .plot-scene { margin-top: 24px; padding-top: 20px; }
+        .plot-scene .plot-dialogue { padding-left: 12px; }
+      }
+
       /* ---------- 作品（ショート動画） ---------- */
       .shorts {
         display: grid;
@@ -660,15 +700,61 @@
         <article class="plot-sample" aria-labelledby="sample-plot-title">
           <p class="sample-label">自主制作サンプル／未公開・受託実績ではありません</p>
           <h4 id="sample-plot-title">全部は終わりません</h4>
-          <p>想定：6分程度の職場ドラマ。登場人物：ひより（28歳・主人公）、莉子（22歳・後輩）、木村（先輩）、店長。</p>
-          <ol>
-            <li><strong>冒頭（0:00）</strong>　閉店後のレジ前。シャッターが下り、ひよりだけがモップを動かしている。心の声「今日も、私だけ。……いや、今日“も”って何だ」。足元には木村のレシート整理の箱。自分の発注作業はまだ手つかず。</li>
-            <li><strong>展開（0:20〜）</strong>　木村「ひよりちゃん、ごめん！これ、ちょっとだけ見といて」――ひより「いいですよ！」。店長からは「在庫表、今日中に更新できる？」と頼まれ、「あ、はい」と受ける。休憩室で「断れなくて偉いよね」と言われ、笑顔のまま手が止まる。ひより「だって、断ったら嫌な人になるじゃないですか」。スマホには発注締切「20時」の通知が積み重なる。</li>
-            <li><strong>転換（2:30）</strong>　莉子「ひよりさん、これとこれ、どっちを先に終わらせればいいですか？」。ひより「え……それ、店長に聞いたら」。莉子「聞いていいんですか？」。ひよりは少し黙り、「……聞いて、いいんだよ」。口にした自分の言葉が刺さる。スマホ画面には20時の締切。</li>
-            <li><strong>結末（4:40〜）</strong>　店長室の前。ひよりは深呼吸し、小さく二度ノックする。「店長、全部は時間内に終わりません。どれを先にしますか」。店長は画面を見たまま「……今、言う？ もう20時前だよ」。ひよりの指先が震える。いつもなら謝って引き受ける場面で、「今だから言います。発注が20時締切で、在庫表と木村さんの分、全部は無理です」と返す。ため息とともにキーボードの音が止まる。店長「……発注、先にやって。在庫表は明日の朝」。ひよりは「ありがとうございます」を飲み込み、「はい。……そうします」。廊下で莉子が小さく親指を立てる。ひよりは笑えず、ただ頷く。</li>
-          </ol>
-          <p><strong>ラスト</strong>　ひよりが発注画面を開き、送信ボタンを押す。19時52分。木村のレシート整理の箱に「明日の朝、一緒にやりましょう」と付箋を一枚貼る。</p>
-          <p class="sample-note">構成の狙い：レシートの箱と20時締切の通知で、断れないことの負担を目に見える形にする。後輩への言葉を転換点とし、店長の渋い反応を越えて仕事の優先順位を伝える小さな一歩で終える。実際の再生数や受注成果を示すものではありません。</p>
+          <p class="plot-intro">想定：約6分の職場ドラマ</p>
+          <p class="plot-characters">登場：ひより（28歳・主人公）／莉子（22歳・後輩）／木村（先輩）／店長</p>
+
+          <section class="plot-scene" aria-labelledby="plot-scene-1">
+            <h5 id="plot-scene-1">0:00｜冒頭</h5>
+            <p>閉店後のレジ前。シャッターの音。</p>
+            <p>ひよりだけがモップを動かしている。</p>
+            <p class="plot-dialogue"><strong>ひより（心の声）</strong><br>「今日も、私だけ。……いや、今日“も”って何だ」</p>
+            <p>足元に、他人のレシート整理の箱。自分の発注作業は未着手のまま。</p>
+          </section>
+
+          <section class="plot-scene" aria-labelledby="plot-scene-2">
+            <h5 id="plot-scene-2">0:20｜展開</h5>
+            <p class="plot-dialogue"><strong>木村</strong><br>「ひよりちゃん、ごめん！これ、ちょっとだけ見といて」</p>
+            <p class="plot-dialogue"><strong>ひより</strong><br>「いいですよ！」（即答）</p>
+            <p class="plot-dialogue"><strong>店長</strong><br>「在庫表、今日中に更新できる？」</p>
+            <p class="plot-dialogue"><strong>ひより</strong><br>「あ、はい」</p>
+            <p>休憩室で同僚から「断れなくて偉いよね」と言われる。笑顔で返すが、手が止まる。</p>
+            <p class="plot-dialogue"><strong>ひより</strong><br>「だって、断ったら嫌な人になるじゃないですか」</p>
+            <p>スマホには、自分の発注締切「20時」の通知が積み重なる。</p>
+          </section>
+
+          <section class="plot-scene" aria-labelledby="plot-scene-3">
+            <h5 id="plot-scene-3">2:30｜転換</h5>
+            <p class="plot-dialogue"><strong>莉子</strong><br>「ひよりさん、これとこれ、どっちを先に終わらせればいいですか？」</p>
+            <p class="plot-dialogue"><strong>ひより</strong><br>「え……それ、店長に聞いたら」</p>
+            <p class="plot-dialogue"><strong>莉子</strong><br>「聞いていいんですか？」</p>
+            <p>ひよりは少し黙る。</p>
+            <p class="plot-dialogue"><strong>ひより</strong><br>「……聞いて、いいんだよ」</p>
+            <p>言った瞬間、自分の言葉が自分に刺さる。通知画面の「20時」を見る。</p>
+          </section>
+
+          <section class="plot-scene" aria-labelledby="plot-scene-4">
+            <h5 id="plot-scene-4">4:40｜結末</h5>
+            <p>店長室の前で深呼吸。小さく二度ノックする。</p>
+            <p class="plot-dialogue"><strong>ひより</strong><br>「店長、全部は時間内に終わりません。どれを先にしますか」</p>
+            <p>店長は画面から目を離さない。</p>
+            <p class="plot-dialogue"><strong>店長</strong><br>「……今、言う？　もう20時前だよ」</p>
+            <p>空気が固まる。ひよりの指先が震える。いつもなら「すみません、やります」が出る場面。</p>
+            <p class="plot-dialogue"><strong>ひより</strong><br>「今だから言います。発注が20時締切で、在庫表と木村さんの分、全部は無理です」</p>
+            <p>店長がため息をつく。キーボードの音が止まる。</p>
+            <p class="plot-dialogue"><strong>店長</strong><br>「……発注、先にやって。在庫表は明日の朝」</p>
+            <p>「ありがとうございます」を言いかけて、ひよりは飲み込む。</p>
+            <p class="plot-dialogue"><strong>ひより</strong><br>「はい。……そうします」</p>
+            <p>部屋を出ると、莉子が小さく親指を立てる。ひよりは笑い返せず、ただ頷く。</p>
+          </section>
+
+          <section class="plot-scene plot-ending" aria-labelledby="plot-scene-last">
+            <h5 id="plot-scene-last">ラスト</h5>
+            <p>発注画面を開く。送信ボタンを押した時刻は19時52分。</p>
+            <p>木村のレシートの箱に付箋を一枚。</p>
+            <p class="plot-dialogue">「明日の朝、一緒にやりましょう」</p>
+          </section>
+
+          <p class="sample-note">構成の狙い：レシートの箱と20時締切の通知で負担を可視化。後輩との会話を転換点にし、店長の渋い反応を越えて優先順位を伝える小さな一歩で終える。再生数や受注成果を示すものではありません。</p>
         </article>
 
         <h3 class="sub-head" id="works-shorts">ショート動画</h3>
