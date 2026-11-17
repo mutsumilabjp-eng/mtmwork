@@ -383,6 +383,24 @@
         color: var(--c-text-sub);
       }
       .plot-scene .plot-dialogue br { display: block; content: ""; margin-bottom: 5px; }
+      .plot-sample > details { margin-top: 20px; }
+      .plot-sample > details > summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 16px;
+        border: 1px solid var(--c-rule);
+        color: var(--c-text);
+        cursor: pointer;
+        list-style: none;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .plot-sample > details > summary::-webkit-details-marker { display: none; }
+      .plot-sample > details > summary::after { content: "＋"; font-size: 18px; color: var(--c-accent); }
+      .plot-sample > details[open] > summary::after { content: "－"; }
+      .plot-sample > details > summary:hover { background: var(--c-bg); }
+      .plot-sample > details > .detail-body { padding-top: 6px; }
       .plot-ending { margin-bottom: 8px; }
       @media (max-width: 599px) {
         .plot-scene { margin-top: 24px; padding-top: 20px; }
@@ -728,6 +746,9 @@
           <p class="plot-intro">想定：約6分の職場ドラマ</p>
           <p class="plot-characters">登場：ひより（28歳・主人公）／莉子（22歳・後輩）／木村（先輩）／店長</p>
 
+          <details class="plot-details">
+            <summary>プロット全文を読む</summary>
+            <div class="detail-body">
           <section class="plot-scene" aria-labelledby="plot-scene-1">
             <h5 id="plot-scene-1">0:00｜冒頭</h5>
             <p>閉店後のレジ前。シャッターの音。</p>
@@ -780,6 +801,39 @@
           </section>
 
           <p class="sample-note">構成の狙い：レシートの箱と20時締切の通知で負担を可視化。後輩との会話を転換点にし、店長の渋い反応を越えて優先順位を伝える小さな一歩で終える。再生数や受注成果を示すものではありません。</p>
+            </div>
+          </details>
+        </article>
+
+        <h3 class="sub-head" id="works-short-scripts">ショート台本</h3>
+        <article class="plot-sample" id="sample-short-script" aria-labelledby="sample-short-script-title">
+          <p class="sample-label">自主制作サンプル／恋愛・占い系ショート台本・動画未制作</p>
+          <h4 id="sample-short-script-title">40代、彼の「もう少し待って」にあと5年使えますか</h4>
+          <p class="plot-intro">約59.7秒の仮尺（音声・動画未実測）／ナレーション原稿と12CUT演出設計</p>
+          <p>冒頭で年齢と「あと5年」という具体的な悩みを提示し、カード開示を経て、相手を待つ時間から自分の選択へ視点を切り替える構成です。</p>
+          <details>
+            <summary>ナレーション抜粋と演出設計を見る</summary>
+            <div class="detail-body">
+              <section class="plot-scene" aria-labelledby="sample-short-script-voice">
+                <h5 id="sample-short-script-voice">ナレーション抜粋</h5>
+                <p class="plot-dialogue">40代、彼の「もう少し待って」に、あと5年使えますか</p>
+                <p>最後のカードが、待つ恋の答えを示します</p>
+                <p>20代の5年と、今の5年は違う</p>
+                <p>夜は会いたい、でも休日も誕生日も会えない</p>
+                <p>でも嫌いになれないあなたへ</p>
+                <p>現れたのは「運命の輪」</p>
+                <p>彼が変わる日より、あなたが動き出す日</p>
+                <p>好きなままでいい、でも人生まで保留にしないで</p>
+              </section>
+              <section class="plot-scene" aria-labelledby="sample-short-script-cuts">
+                <h5 id="sample-short-script-cuts">12CUTの演出設計（抜粋）</h5>
+                <p>冒頭0秒：強い見出しを最初から表示し、低音SEと照明変化でフックを作る。</p>
+                <p>約31秒：カード裏面を1回反転して「運命の輪」を開示。視聴理由を回収する。</p>
+                <p>終盤：保存・コメントの案内を整理し、プロフィールへの行動導線につなぐ。</p>
+              </section>
+              <p class="sample-note">自主制作の台本・演出設計例です。受託実績、公開済み動画、尺の実測結果ではありません。</p>
+            </div>
+          </details>
         </article>
 
         <h3 class="sub-head" id="works-shorts">ショート動画</h3>
@@ -825,35 +879,7 @@
           </figure>
         </div>
 
-        <article class="plot-sample" id="sample-short-script" aria-labelledby="sample-short-script-title">
-          <p class="sample-label">自主制作サンプル／恋愛・占い系ショート台本・動画未制作</p>
-          <h4 id="sample-short-script-title">40代、彼の「もう少し待って」にあと5年使えますか</h4>
-          <p class="plot-intro">約59.7秒の仮尺（音声・動画未実測）／ナレーション原稿と12CUT演出設計</p>
-          <p>冒頭で年齢と「あと5年」という具体的な悩みを提示し、カード開示を経て、相手を待つ時間から自分の選択へ視点を切り替える構成です。</p>
-          <details>
-            <summary>ナレーション抜粋と演出設計を見る</summary>
-            <div class="detail-body">
-              <section class="plot-scene" aria-labelledby="sample-short-script-voice">
-                <h5 id="sample-short-script-voice">ナレーション抜粋</h5>
-                <p class="plot-dialogue">40代、彼の「もう少し待って」に、あと5年使えますか</p>
-                <p>最後のカードが、待つ恋の答えを示します</p>
-                <p>20代の5年と、今の5年は違う</p>
-                <p>夜は会いたい、でも休日も誕生日も会えない</p>
-                <p>でも嫌いになれないあなたへ</p>
-                <p>現れたのは「運命の輪」</p>
-                <p>彼が変わる日より、あなたが動き出す日</p>
-                <p>好きなままでいい、でも人生まで保留にしないで</p>
-              </section>
-              <section class="plot-scene" aria-labelledby="sample-short-script-cuts">
-                <h5 id="sample-short-script-cuts">12CUTの演出設計（抜粋）</h5>
-                <p>冒頭0秒：強い見出しを最初から表示し、低音SEと照明変化でフックを作る。</p>
-                <p>約31秒：カード裏面を1回反転して「運命の輪」を開示。視聴理由を回収する。</p>
-                <p>終盤：保存・コメントの案内を整理し、プロフィールへの行動導線につなぐ。</p>
-              </section>
-              <p class="sample-note">自主制作の台本・演出設計例です。受託実績、公開済み動画、尺の実測結果ではありません。</p>
-            </div>
-          </details>
-        </article>
+
 
         <h3 class="sub-head" id="works-banners">バナー・SNS画像</h3>
         <div class="gallery">
