@@ -220,7 +220,10 @@
       #works-sites { scroll-margin-top: 24px; }
 
       /* ---------- 作品（サイト） ---------- */
-      .works { display: grid; gap: 56px; }
+      .works { display: grid; grid-template-columns: minmax(0, 1fr); min-width: 0; width: 100%; gap: 56px; }
+      .site-work { min-width: 0; width: 100%; max-width: 100%; }
+      .site-work .site-shot { max-width: 100%; }
+      .itk-preview { width: 100%; min-width: 0; }
       .site-shot {
         display: block;
         width: 100%;
@@ -600,6 +603,28 @@
         .craft-two { gap: 12px; }
       }
 
+      /* 参考動画ボタン：テキストリンクより押しやすく、LPの配色に統一 */
+      .reference-video-action { margin: 20px 0 0 !important; }
+      .reference-video-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        max-width: 100%;
+        padding: 13px 20px;
+        border: 1px solid var(--c-accent);
+        background: var(--c-accent);
+        color: var(--c-surface);
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 600;
+        text-decoration: none;
+        text-align: center;
+        overflow-wrap: anywhere;
+      }
+      .reference-video-btn:hover { background: var(--c-text); border-color: var(--c-text); color: var(--c-surface); }
+      @media (max-width: 599px) { .reference-video-btn { width: 100%; } }
+
       /* ---------- 作品（ショート動画） ---------- */
       .shorts {
         display: grid;
@@ -882,9 +907,9 @@
       <!-- 作品 -->
       <section id="works" aria-labelledby="works-h">
         <div class="sec-head">
-          <h2 id="works-h">作品</h2>
+          <h2 id="works-h">サイト・LP制作例</h2>
         </div>
-        <p class="lead">実際に制作したサイト・動画・画像と、YouTube向けの自主制作プロットを掲載しています。サイト作品は「詳細を見る」から、目的・担当範囲・公開ページを確認できます。</p>
+        <p class="lead">制作したWebサイトとLPの作例を掲載しています。各作品の「詳細を見る」から、目的・構成・制作上の工夫と公開ページを確認できます。</p>
         <div class="works" id="works-sites">
           <div class="site-work">
             <div class="site-shot itk-preview" role="img" aria-label="飲食の仕事のトップページ。深緑の見出しパネルと飲食店の写真を組み合わせたデザイン">
@@ -904,7 +929,7 @@
               <h3 class="site-name">飲食の仕事｜飲食業界向け転職情報サイト</h3>
               <span class="tag">Webサイト・LP制作</span>
             </div>
-            <p class="work-note">制作手法：ChatGPTのチャット上で企画・構成・文章・デザイン・実装まで構築（Codex不使用）。飲食現場の実体験を起点に、記事から転職相談へ進む導線を設計。</p>
+            <p class="work-note">ChatGPTのチャットだけで、企画・ライティング設計・サイト構築・デザイン・画像配置・公開まで一貫して制作した例。飲食現場の実体験を起点に、記事から転職相談への導線も設計。</p>
             <details>
               <summary><span class="d-label"></span><span class="d-sign" aria-hidden="true"></span></summary>
               <div class="site-body">
@@ -934,7 +959,7 @@
               <h3 class="site-name">転職情報サイト</h3>
               <span class="tag">動きのあるLP</span>
             </div>
-            <p class="work-note">制作手法：ChatGPTのチャット上で企画・構成・デザイン・実装まで構築（Codex不使用）。求人票の曖昧な表現を具体的な確認項目へ整理。</p>
+            <p class="work-note">ChatGPTのチャットだけで、企画・ライティング設計・LP構築・デザイン・画像配置・公開まで一貫して制作した例。求人票の曖昧な表現を具体的な確認項目へ整理。</p>
             <details>
               <summary><span class="d-label"></span><span class="d-sign" aria-hidden="true"></span></summary>
               <div class="site-body">
@@ -952,7 +977,7 @@
           <div class="craft-build" aria-labelledby="chat-only-build-title">
             <p class="craft-eyebrow">制作実例｜ChatGPTのみでWeb・LPを構築</p>
             <h4 id="chat-only-build-title">ChatGPTのチャットだけでも、サイトを組み立てます。</h4>
-            <p>「飲食の仕事」と「佐藤の転職情報LP」は、どちらも<strong>ChatGPTのチャットだけで制作を進めた実例です。Codexは使用していません。</strong> 目的・構成・コピーを会話で詰め、HTML/CSSなどの実装指示を具体化。出力結果を確認し、レイアウトや言葉、導線の気になる点をその都度修正する方法で構築しました。</p>
+            <p>「飲食の仕事」と「佐藤の転職情報LP」は、ChatGPTのチャットだけで、企画・ライティング設計・サイト構築・デザイン・画像配置・LP公開まで一貫して制作した例です。目的・構成・コピーを会話で詰め、HTML/CSSなどの実装を組み立てながら、レイアウトや文章、導線の気になる点をその都度修正しました。</p>
             <p>AIに一度依頼して完成を待つのではなく、何を作るかを分解し、細かな変更を重ねる進め方です。もちろんCodexやClaude Codeを使用した制作・実装にも対応しています。案件に合わせてツールを使い分け、完成形は自分で判断します。</p>
           </div>
           <div class="craft-priority">
@@ -983,7 +1008,9 @@
           </div>
           <p class="craft-footnote">制作領域を問わず、要件と素材が揃う案件は着手から最短1日で納品前の最終確認まで進めることを目指しています。制作範囲が大きい案件、外部確認・追加修正が必要な案件は個別に納期を調整します。AIの出力は自分で確認・修正し、SEO施策の効果や検索順位は保証しません。</p>
         </section>
+      </section>
 
+      <section id="video-works" aria-label="動画・台本の制作例">
         <h3 class="sub-head" id="works-plots">YouTube長尺動画作例｜企画・構成・映像制作</h3>
         <article class="plot-sample long-film-sample" aria-labelledby="sample-plot-title">
           <p class="sample-label">自主制作／創作ストーリー／企画・台本・映像演出</p>
@@ -1093,11 +1120,11 @@
           </section>
         </article>
 
-        <h3 class="sub-head" id="works-ttp">参考動画のTTP制作例</h3>
+        <h3 class="sub-head" id="works-ttp">参考動画の演出を再構築した制作例</h3>
         <article class="plot-sample ttp-sample" aria-labelledby="ttp-sample-title">
           <p class="sample-label">参考元の冒頭演出を研究した自主制作例／2ch風ショート</p>
           <h4 id="ttp-sample-title">「卒業証書」冒頭6.87秒</h4>
-          <p>参考元の冒頭を手本に、人物・背景・選択ボタン・字幕・音の出し方を分析して組み直しました。Premiere ProやAfter Effectsを使わず、Claude Codeで映像にしています。</p>
+          <p>Premiere ProやAfter Effectsを使わず、<strong>Claude Codeで映像そのものを組み立てています。</strong> 参考動画から視聴者を止める演出の構造を読み取り、独自に用意した人物・背景・テロップ・音を組み合わせて再構築。素材を並べるだけでなく、表示位置・動き・タイミングまでコードで調整できる制作技術を示した作例です。</p>
           <div class="short-script-feature">
             <figure class="short-script-video">
               <video src="assets/application/graduation.mp4" poster="assets/application/graduation.jpg" controls playsinline preload="metadata" aria-label="参考動画の演出を取り入れた「卒業証書」の自主制作ショート">
@@ -1108,9 +1135,9 @@
             <div class="short-script-thinking">
               <h5>再現した要素と制作工程</h5>
               <p><strong>冒頭と画面の流れを分析します。</strong>情報を出す順番、人物と背景の配置、場面転換、音の役割を確認します。</p>
-              <p><strong>Claude Codeで画面を組み立てます。</strong>テロップ・画像・動画・音声の素材はすべてAIで生成しています。</p>
+              <p><strong>映像をコードで制御します。</strong>画像・テロップを重ね、画面上の動きや切り替えを組み立てます。制作内容に応じて生成素材と既存素材を使い分けます。</p>
               <p><strong>細かな修正にも対応します。</strong>文字の位置や大きさ、表示時間、場面転換や音のタイミングをコードで調整します。</p>
-              <p><strong>参考元</strong> <a href="https://www.youtube.com/shorts/P8z-8GQ-9P4" target="_blank" rel="noopener noreferrer">YouTube Shortsで見る ↗</a></p>
+              <p class="reference-video-action"><a class="reference-video-btn" href="https://www.youtube.com/shorts/P8z-8GQ-9P4" target="_blank" rel="noopener noreferrer">参考にしたYouTube Shortsを見る <span aria-hidden="true">↗</span></a></p>
             </div>
           </div>
           <p class="sample-note">参考元の演出を研究して組み直した自主制作です。元動画の素材や制作実績ではありません。</p>
@@ -1158,12 +1185,12 @@
             <figcaption><strong>父の通帳を見た瞬間</strong><span class="short-desc">ナレーションもAIで再現。通帳や紙束の映像、字幕、効果音で家族のお金をめぐる不安を描きました。</span></figcaption>
           </figure>
         </div>
+      </section>
 
-
-
+      <section id="design-works" aria-label="バナー・SNS画像の制作例">
         <h3 class="sub-head" id="works-banners">バナー・SNS画像</h3>
         <div class="banner-thinking">
-          <h4>見た目より先に、何を一番に読んでもらうか。</h4>
+          <h4>見た目より先に、何を一番に読んでもらうか、を重視して制作します。</h4>
           <p>想定する閲覧者と掲載場所を決め、最初に見える見出し、補助情報、余白の順に組み立てます。基本パレットは3色以内、書体は2種類以内。文字は左揃え、端から40px以上を目安に、見出しと補助文字に約3倍の強弱をつけます。</p>
           <p>一枚のメッセージは最大3つまで。グラデーションや影に頼らず、情報のまとまり・字間・改行・写真と文字の関係を調整します。仕上げはスマホ相当の縮小表示でも確認します。</p>
         </div>
@@ -1191,7 +1218,6 @@
         </div>
         <div class="about">
           <p>飲食店のキッチンで働きながら、副業でサイト・動画・画像の制作をしています。</p>
-          <p>ChatGPTを使い、会話の中で構成・文章・デザイン・コードを段階的に組み立てます。飲食情報サイトと佐藤の転職LPはCodexを使わず、ChatGPTのチャットだけで制作した作例です。</p>
           <p>AIらしい見た目を調整する技術以上に、読者の理解から問い合わせ・相談などの行動へつながる導線設計を重視しています。文章と画面は自分で確認し、必要な修正を行います。</p>
           <p>動画・SNS制作は継続的なご依頼を中心に、サイト・LP制作は単発のご相談にも対応します。ご連絡は、ご利用中のサービスのメッセージ機能からお願いします。</p>
           <dl class="about-list">
