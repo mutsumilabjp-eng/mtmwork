@@ -525,6 +525,41 @@
         .plot-hook { padding: 16px; }
       }
 
+      /* LP / コピー / SEO とバナー制作の考え方 */
+      .craft-section {
+        margin-top: 44px;
+        border: 1px solid var(--c-rule);
+        padding: 30px 32px 32px;
+        background: var(--c-surface);
+        scroll-margin-top: 24px;
+      }
+      .craft-eyebrow { margin: 0 0 9px; color: var(--c-accent); font-size: 13px; font-weight: 700; letter-spacing: .08em; }
+      .craft-section h3, .banner-thinking h4 { margin: 0 0 16px; font-family: var(--f-head); font-size: var(--fs-h3); line-height: 1.6; }
+      .craft-section > p { max-width: 63em; line-height: 1.9; }
+      .craft-steps {
+        list-style: none; padding: 0; margin: 24px 0;
+        display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;
+      }
+      .craft-steps li { padding: 16px 18px; border: 1px solid var(--c-rule); }
+      .craft-steps strong { display: block; margin-bottom: 7px; font-size: 15px; color: var(--c-accent); }
+      .craft-steps span { display: block; font-size: 14px; line-height: 1.8; }
+      .craft-two { border-top: 1px solid var(--c-rule); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; padding-top: 22px; }
+      .craft-two h4 { margin: 0 0 15px; font-size: 17px; font-family: var(--f-head); }
+      .craft-two p { margin: 0 0 14px; line-height: 1.85; }
+      .craft-two strong { color: var(--c-accent); }
+      .craft-footnote { margin: 16px 0 0; padding-top: 16px; border-top: 1px solid var(--c-rule); color: var(--c-text-sub); font-size: 13px; }
+      .banner-thinking { padding-bottom: 20px; max-width: 65em; }
+      .banner-thinking h4 { font-size: 19px; }
+      .banner-thinking p { line-height: 1.9; margin: 0 0 12px; }
+      .gallery .banner-wide { grid-column: 1 / -1; }
+      .gallery .banner-wide img { width: 100%; height: auto; }
+      .banner-wide > p { margin: 9px 0 0; font-size: 14px; color: var(--c-text-sub); line-height: 1.8; }
+      @media (max-width: 599px) {
+        .craft-section { padding: 24px 18px; }
+        .craft-steps, .craft-two { grid-template-columns: 1fr; }
+        .craft-two { gap: 12px; }
+      }
+
       /* ---------- 作品（ショート動画） ---------- */
       .shorts {
         display: grid;
@@ -774,7 +809,7 @@
               <h3>サイト・LP制作</h3>
             </div>
             <div>
-              <p>企画・構成・デザイン・実装まで対応します。広告流入や問い合わせなど、目的に沿った導線を設計します。単発のご依頼も対応可能です。納期は制作範囲に応じてご相談ください。</p>
+              <p>目的と読者・流入経路を整理し、文章と構成を先に設計してからデザイン・実装します。検索流入を想定するページではSEOの基本設計も意識し、公開後の行動につながる導線を整えます。</p>
               <a class="more" href="#works-sites">作品例を見る →</a>
             </div>
           </article>
@@ -784,7 +819,7 @@
               <h3>バナー・SNS画像</h3>
             </div>
             <div>
-              <p>投稿の目的に合わせ、スマートフォンで読める文字の大きさと情報の優先順位を重視して制作します。PNGで納品し、修正は原則2回まで対応します。</p>
+              <p>見る人・媒体・目的を先に決め、文字の優先順位と余白から設計。色・書体を絞り、縮小しても読めるか確認します。レトロ印刷風からシンプルな情報整理型まで対応します。</p>
               <a class="more" href="#works-banners">作品例を見る →</a>
             </div>
           </article>
@@ -856,6 +891,35 @@
             </details>
           </div>
         </div>
+
+        <section class="craft-section" id="lp-process" aria-labelledby="lp-process-title">
+          <p class="craft-eyebrow">制作の進め方｜Web・LP</p>
+          <h3 id="lp-process-title">デザインの前に、読者と文章を設計する。</h3>
+          <p>LPは見た目から作り始めません。誰が、何をきっかけにページへ来て、どの情報を読めば次の行動を選べるのかを整理します。広告向けLPと検索流入を想定した情報ページでは、求められる文章や導線を分けて考えています。</p>
+          <ol class="craft-steps">
+            <li><strong>01｜目的と読者を整理</strong><span>問い合わせ・申込み・記事閲覧など、ページの役割を決める。流入元と読者の疑問、必要な情報を確認。</span></li>
+            <li><strong>02｜事実と素材を調べる</strong><span>公式資料・商品条件・利用の流れ・一次情報を照合。実績、意見、仮説、創作を混ぜない。</span></li>
+            <li><strong>03｜文章と構成を先に作る</strong><span>ファーストビュー、見出し、本文、CTAを複数案から検討。先に原稿の筋道を通す。</span></li>
+            <li><strong>04｜デザインと素材を決める</strong><span>世界観、書体、余白、写真や動画の役割を設計。実素材を優先し、装飾のための素材を増やしすぎない。</span></li>
+            <li><strong>05｜実装して読み心地を確かめる</strong><span>HTML/CSS等で形にし、スマートフォンで読み順・CTA・文字サイズ・表示速度を確認。</span></li>
+            <li><strong>06｜公開前の検査と修正</strong><span>誤記、リンク、必須表記、画像、レスポンシブ表示を確認。最後は自分の目で文章と画面を整える。</span></li>
+          </ol>
+          <div class="craft-two">
+            <div>
+              <h4>ライティングで気をつけること</h4>
+              <p><strong>冒頭で相手の疑問に答える。</strong>「驚きの」「次世代」といった抽象的な宣伝語より、具体的な悩み・場面・特徴から書き始めます。</p>
+              <p><strong>見出しだけでも話が追える。</strong>読者が途中から見ても理解できるよう、一段落に話題を詰め込まず、結論・理由・具体例を整理します。</p>
+              <p><strong>行動まで自然につなぐ。</strong>読者の迷いに先回りして条件や注意点を示し、CTAでは「押すと何が起きるか」を明確にします。</p>
+            </div>
+            <div>
+              <h4>SEOを意識した設計</h4>
+              <p><strong>検索意図から情報を選ぶ。</strong>想定キーワードだけを繰り返さず、検索する人が知りたい答え・比較点・次の疑問を見出しと本文に反映します。</p>
+              <p><strong>ページの骨格を整える。</strong>内容に合うタイトル・見出し階層・meta description、適切な内部リンク、画像の代替テキストを検討します。</p>
+              <p><strong>スマホと表示品質を確かめる。</strong>画像の重さや読みやすさ、情報の更新性も確認。検索順位を保証するものではなく、読み手と検索エンジンの双方が理解しやすいページを目指します。</p>
+            </div>
+          </div>
+          <p class="craft-footnote">AIで構成・見出し・実装の案を比較しながら、公開する文章の自然さと正確さは自分で確認・修正します。SEO施策の効果や検索順位の実績を示す説明ではありません。</p>
+        </section>
 
         <h3 class="sub-head" id="works-plots">YouTube企画・プロット</h3>
         <article class="plot-sample" aria-labelledby="sample-plot-title">
@@ -1078,6 +1142,11 @@
 
 
         <h3 class="sub-head" id="works-banners">バナー・SNS画像</h3>
+        <div class="banner-thinking">
+          <h4>見た目より先に、何を一番に読んでもらうか。</h4>
+          <p>想定する閲覧者と掲載場所を決め、最初に見える見出し、補助情報、余白の順に組み立てます。基本パレットは3色以内、書体は2種類以内。文字は左揃え、端から40px以上を目安に、見出しと補助文字に約3倍の強弱をつけます。</p>
+          <p>一枚のメッセージは最大3つまで。グラデーションや影に頼らず、情報のまとまり・字間・改行・写真と文字の関係を調整します。仕上げはスマホ相当の縮小表示でも確認します。</p>
+        </div>
         <div class="gallery">
           <figure class="g-item">
             <img src="assets/mtmwork-assets/img-7.jpg" alt="カフェのSNS投稿画像の作例です" loading="lazy" />
@@ -1086,6 +1155,11 @@
           <figure class="g-item">
             <img src="assets/mtmwork-assets/banner-nagi.jpg" alt="「朝に見る優先順位」と題した正方形の投稿バナーの作例です" loading="lazy" />
             <figcaption>朝に見る優先順位</figcaption>
+          </figure>
+          <figure class="g-item banner-wide" id="banner-retro-sample">
+            <img src="assets/mtmwork-assets/banner-retro-bookcoffee.webp" alt="古本と珈琲。クリーム色の古紙に深い青緑と朱色の2色インクを重ね、読書する人物を版画・網点印刷風に描いた横長バナー" width="1672" height="941" loading="lazy" />
+            <figcaption>古本と珈琲｜レトロ印刷風・横長バナー</figcaption>
+            <p>架空の読書会を題材にした自主制作例。古紙の質感、網点、インクのかすれを使い、見出しと人物を左右に分けて情報の優先順位を付けました。実在イベントの広告ではありません。</p>
           </figure>
         </div>
       </section>
