@@ -457,6 +457,18 @@
         .short-script-video { max-width: 230px; margin: 0 auto; }
       }
 
+      /* 長尺動画作例｜埋め込み・解説 */
+      .long-video-layout { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(235px, 1fr); gap: 28px; align-items: start; margin: 26px 0; }
+      .long-video-frame { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--c-rule); background: #191918; }
+      .long-video-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+      .long-video-link { margin: 10px 0 0 !important; font-size: 14px; }
+      .long-video-link a { color: var(--c-accent); text-underline-offset: 4px; }
+      .long-video-player .sample-note { margin-top: 12px; font-size: 12px; }
+      .long-video-notes h5 { margin: 0 0 15px; color: var(--c-accent); font-family: var(--f-head); font-size: 17px; }
+      .long-video-notes p { margin: 0 0 15px; line-height: 1.85; font-size: 14px; }
+      .long-video-notes strong { color: var(--c-accent); }
+      @media (max-width: 799px) { .long-video-layout { grid-template-columns: 1fr; } }
+
       /* YouTube企画・プロットの提案書レイアウト */
       .plot-hook {
         background: var(--c-bg);
@@ -817,11 +829,11 @@
           <article class="skill">
             <div>
               <span class="num">一</span>
-              <h3>YouTube企画・プロット</h3>
+              <h3>YouTube企画・長尺動画</h3>
             </div>
             <div>
-              <p>題材に合わせて冒頭のつかみ、話の展開、転換点、結末を整理します。まず構成案で方向性を共有し、続きが気になる流れを組み立てます。定期的な企画・構成のご依頼にも対応します。</p>
-              <a class="more" href="#works-plots">構成サンプルを見る →</a>
+              <p>冒頭の引き、物語の転換点、音と画面の演出、最後の案内まで設計します。秒数付きの演出台本から完成動画まで、制作例でご覧いただけます。</p>
+              <a class="more" href="#works-plots">長尺動画作例を見る →</a>
             </div>
           </article>
           <article class="skill">
@@ -929,9 +941,9 @@
           <p>LPで先に決めるのは見た目ではなく、誰がどこから来て、どんな疑問を解消し、最後にどの行動を選ぶのか。読者が納得できる情報の順番と、無理のないCTAへの流れを設計してから文章とデザインを整えます。検索流入と広告流入では、見せる情報も導線も変えます。</p>
           <div class="craft-build" aria-labelledby="chat-only-build-title">
             <p class="craft-eyebrow">制作実例｜ChatGPTのみでWeb・LPを構築</p>
-            <h4 id="chat-only-build-title">Codexを使わず、ChatGPTのチャットだけでサイトを組み立てる。</h4>
+            <h4 id="chat-only-build-title">ChatGPTのチャットだけでも、サイトを組み立てます。</h4>
             <p>「飲食の仕事」と「佐藤の転職情報LP」は、どちらも<strong>ChatGPTのチャットだけで制作を進めた実例です。Codexは使用していません。</strong> 目的・構成・コピーを会話で詰め、HTML/CSSなどの実装指示を具体化。出力結果を確認し、レイアウトや言葉、導線の気になる点をその都度修正する方法で構築しました。</p>
-            <p>AIに一度依頼して完成を待つのではなく、何を作るかを分解し、細かな変更を重ねる進め方です。設計から実装までAIを使いこなしつつ、伝える内容や完成形は自分で判断します。</p>
+            <p>AIに一度依頼して完成を待つのではなく、何を作るかを分解し、細かな変更を重ねる進め方です。もちろんCodexやClaude Codeを使用した制作・実装にも対応しています。案件に合わせてツールを使い分け、完成形は自分で判断します。</p>
           </div>
           <div class="craft-priority">
             <h4>「AIっぽさ」を消すデザインにも対応。ただし目的は、見栄えを整えることだけではありません。</h4>
@@ -962,133 +974,71 @@
           <p class="craft-footnote">制作領域を問わず、要件と素材が揃う案件は着手から最短1日で納品前の最終確認まで進めることを目指しています。制作範囲が大きい案件、外部確認・追加修正が必要な案件は個別に納期を調整します。AIの出力は自分で確認・修正し、SEO施策の効果や検索順位は保証しません。</p>
         </section>
 
-        <h3 class="sub-head" id="works-plots">YouTube企画・プロット</h3>
-        <article class="plot-sample" aria-labelledby="sample-plot-title">
-          <p class="sample-label">YouTubeドラマ企画・プロット／自主制作のフィクション／未公開</p>
-          <h4 id="sample-plot-title">全部は終わりません</h4>
-          <p class="plot-intro">職場ドラマ・約6分／「断れない人」が、初めて仕事の優先順位を相談する話</p>
-          <p class="plot-characters">登場人物：ひより（28歳・主人公）／莉子（22歳・後輩）／木村（先輩）／店長</p>
-          <p class="plot-hook">発注締切まで、あと14分。<br>今日も全部「大丈夫です」と答えてきた人が、初めて口にする。<br><strong>「全部は、終わりません」</strong></p>
-          <div class="plot-pitch">
-            <div>
-              <h5>誰に、何を届ける企画か</h5>
-              <p>対象は、頼まれると断れず、仕事を抱え込みがちな人。主人公を単に「断れる人」に変えるのではなく、<strong>引き受けた仕事の優先順位を、相手と決め直す</strong>という小さな変化を描きます。</p>
+        <h3 class="sub-head" id="works-plots">YouTube長尺動画作例｜企画・構成・映像制作</h3>
+        <article class="plot-sample long-film-sample" aria-labelledby="sample-plot-title">
+          <p class="sample-label">自主制作／創作ストーリー／企画・台本・映像演出</p>
+          <h4 id="sample-plot-title">既読のまま、三ヶ月。</h4>
+          <p class="plot-intro">5分8秒／1920×1080／24fps／横型の長尺ストーリー動画</p>
+          <p>3ヶ月間、既読のまま返事を待っている人の夜を描く物語です。視聴者の共感から入り、タロットの一枚をきっかけに「相手は戻ってくるのか」から「私はどうしたいのか」へ問いを転換。最後は物語の中で意味を持った灯りを、夜間受付の案内へつなげています。</p>
+          <div class="long-video-layout">
+            <div class="long-video-player">
+              <div class="long-video-frame">
+                <iframe src="https://drive.google.com/file/d/1SzRecxo6ZHmowUQtJk7WpcKipqI3Shd-/preview" title="長尺動画作例「既読のまま、三ヶ月。」" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe>
+              </div>
+              <p class="long-video-link"><a href="https://drive.google.com/file/d/1SzRecxo6ZHmowUQtJk7WpcKipqI3Shd-/view" target="_blank" rel="noopener noreferrer">完成動画をGoogle Driveで開く ↗</a></p>
+              <p class="sample-note">Driveの共有設定によっては視聴時にアクセス権限が必要になります。</p>
             </div>
-            <div>
-              <h5>視聴後に残したい感情</h5>
-              <p>理不尽な上司を言い負かす爽快感よりも、「言ってもいいんだ」という安堵。誰かを悪役にしきらず、職場で実際に起こりそうな緊張感を残して終えます。</p>
-            </div>
-          </div>
-          <div class="plot-creative">
-            <div>
-              <h5>タイトル案</h5>
-              <p><strong>第一候補：</strong>「全部やります」と言い続けた人が、初めて言い返した日</p>
-              <p>別案：「仕事を断れない28歳。締切14分前に言ったひと言」</p>
-            </div>
-            <div>
-              <h5>サムネイル設計</h5>
-              <p>左に「19:46」の時計と未処理のレシート箱。右に主人公の顔。コピーは<strong>「全部は無理です」</strong>だけ。登場人物や説明文を詰め込まず、状況と葛藤を一目で伝える構成。</p>
+            <div class="long-video-notes">
+              <h5>台本と映像を一体で設計する</h5>
+              <p><strong>秒単位の演出台本。</strong>ナレーションの実測尺に合わせて、字幕・場面転換・効果音の時刻を調整。音声は1文ずつ管理しています。</p>
+              <p><strong>動かす場面を選ぶ。</strong>スマホが光る、箱を開ける、ランプが灯る、という要所の動画を制作。静止画にもカメラ移動や光の演出を加えて一本にまとめています。</p>
+              <p><strong>青から琥珀へ。</strong>孤独な夜の青い光から、カードを見つけたあとの暖かな光へ。色と音で感情の移り変わりを表現しています。</p>
             </div>
           </div>
-
-          <section class="plot-scene plot-first20" aria-labelledby="plot-opening-title">
-            <h5 id="plot-opening-title">冒頭20秒｜実際の台本・演出例</h5>
-            <div class="plot-opening">
-              <p><span class="plot-stamp">00:00</span> <strong>【映像】</strong> 黒画面に電子音。白文字で「19:46」。次に「発注締切 20:00」。</p>
-              <p><span class="plot-stamp">00:04</span> <strong>【映像】</strong> 主人公の手元。未入力の発注画面と、横に積まれた他人のレシート箱。</p>
-              <p class="plot-dialogue"><strong>店長</strong><br>「今になって、終わらないって言うの？」</p>
-              <p class="plot-dialogue"><strong>ひより</strong><br>「はい。全部は、終わりません」</p>
-              <p><span class="plot-stamp">00:14</span> <strong>【演出】</strong> BGMを止め、無音を一拍。主人公の顔で静止。</p>
-              <p><span class="plot-stamp">00:17</span> <strong>【画面】</strong> 「90分前」。音を切り替え、何も起きていない日常へ戻る。</p>
-            </div>
-            <p class="sample-note">結末の一言を冒頭に置き、「そこに至るまで何があったのか」を視聴理由にするコールドオープンです。最初に答えの一部を見せ、その意味を本編で変えていきます。</p>
-          </section>
-
-          <section class="plot-scene" aria-labelledby="plot-structure-title">
-            <h5 id="plot-structure-title">6分の構成｜7つのビートと視聴者の疑問</h5>
+          <section class="plot-scene" aria-labelledby="long-film-structure">
+            <h5 id="long-film-structure">全8章の構成｜5分8秒の視聴体験を設計</h5>
             <ol class="story-map">
-              <li><span class="story-time">0:00–0:20</span><div><strong>① 結末の先出し</strong><span>「なぜ、今になって言えた？」という問いを作る。締切時計と主人公の一言を見せ、理由は伏せる。</span></div></li>
-              <li><span class="story-time">0:20–1:10</span><div><strong>② 「大丈夫です」の積み重ね</strong><span>笑顔で引き受けるたび、画面のタスクが増える。「この人はいつ限界になる？」という予感へ。</span></div></li>
-              <li><span class="story-time">1:10–2:10</span><div><strong>③ 断れないことの代償</strong><span>自分の発注締切が20時と判明。頼んだ先輩は帰り、責任だけが手元に残る。</span></div></li>
-              <li><span class="story-time">2:10–3:10</span><div><strong>④ ひとりで何とかしようとする</strong><span>並行作業を試みるが入力ミスに気づき、余計に時間を失う。いつもの方法が通じない。</span></div></li>
-              <li><span class="story-time">3:10–4:00</span><div><strong>⑤ 後輩の質問が転換点</strong><span>「どっちを先にすればいいですか？」。後輩へ言った「聞いていいんだよ」が、自分に返ってくる。</span></div></li>
-              <li><span class="story-time">4:00–5:20</span><div><strong>⑥ 店長との交渉</strong><span>すぐには受け入れてもらえない。主人公が締切と残作業を具体的に伝え、優先順位を決め直す。</span></div></li>
-              <li><span class="story-time">5:20–6:00</span><div><strong>⑦ 冒頭の意味を回収</strong><span>19:52に発注完了。「全部は終わらなかった」けれど、ひとりで抱える状態は変わっている。</span></div></li>
+              <li><span class="story-time">0:01–0:28</span><div><strong>01｜冒頭のフック</strong><span>「既読のまま、三ヶ月。」と午前2時14分。暗い部屋のスマホの光で、返信を待つ夜を描く。</span></div></li>
+              <li><span class="story-time">0:29–1:02</span><div><strong>02｜共感の積み重ね</strong><span>朝・仕事の休憩・お風呂上がり。何度も通知を確認する反復で、待ち続ける時間を体感させる。</span></div></li>
+              <li><span class="story-time">1:04–1:54</span><div><strong>03｜出来事を起こす</strong><span>眠れない夜の片付けで、棚の奥のタロットの箱を発見。物語の方向を変えるきっかけを作る。</span></div></li>
+              <li><span class="story-time">1:55–2:18</span><div><strong>04｜カードを開示</strong><span>間を取って「吊るされた男」を見せる。反転後の静寂で、主人公が自分に重ねる瞬間を残す。</span></div></li>
+              <li><span class="story-time">2:19–3:09</span><div><strong>05｜問いの反転</strong><span>「あの人は、戻ってくるの？」から「私は、いつまでここで待つつもりなんだろう」へ。問いの主語を変える。</span></div></li>
+              <li><span class="story-time">3:11–3:45</span><div><strong>06｜変化を示す</strong><span>78枚のカードを学ぶ時間を描き、ただの気づきではなく、その後の行動へつなげる。</span></div></li>
+              <li><span class="story-time">3:46–4:38</span><div><strong>07｜世界観の提示</strong><span>夜になると戻ってくる感情に語りかける。ランプが灯る映像で「夜間受付」の意味を伝える。</span></div></li>
+              <li><span class="story-time">4:42–5:08</span><div><strong>08｜案内と余韻</strong><span>夜に聴ける音声への案内から、決め台詞「その恋、一旦お預かりします。」へつなげる。</span></div></li>
             </ol>
           </section>
-
           <details class="plot-details">
-            <summary>シーン別プロットとセリフを詳しく読む</summary>
+            <summary>台本・演出の具体例を見る</summary>
             <div class="detail-body">
-              <section class="plot-scene" aria-labelledby="plot-scene-1">
-                <h5 id="plot-scene-1">0:00–0:20｜締切14分前のコールドオープン</h5>
-                <p>電子音。スマートフォンの画面に19:46。発注システムの画面には赤字で「締切 20:00」。レシートの箱が入力欄の手前をふさいでいる。</p>
-                <p class="plot-dialogue"><strong>店長</strong><br>「今になって、終わらないって言うの？」</p>
-                <p class="plot-dialogue"><strong>ひより</strong><br>「はい。全部は、終わりません」</p>
-                <p>店長が何かを言いかけるところで音を止める。画面は「90分前」へ。</p>
+              <section class="plot-scene" aria-labelledby="long-film-hook">
+                <h5 id="long-film-hook">冒頭｜短い言葉と時刻で情景を作る</h5>
+                <p class="plot-dialogue">「既読のまま、三ヶ月。」<br>「午前2時14分。」</p>
+                <p>0秒目にサムネイルを置き、約0.9秒から本編へ溶け、約2秒で題字を出します。説明を並べず、暗い部屋とスマートフォンの冷たい光だけで状況を伝えます。</p>
               </section>
-              <section class="plot-scene" aria-labelledby="plot-scene-2">
-                <h5 id="plot-scene-2">0:20–1:10｜「はい」が三つ増える</h5>
-                <p>18:16。店内はまだ忙しい。ひよりが伝票を整理していると、木村がレシートの箱を置く。</p>
-                <p class="plot-dialogue"><strong>木村</strong><br>「これ、ちょっとだけ見といてくれる？」</p>
-                <p class="plot-dialogue"><strong>ひより</strong><br>「大丈夫です」</p>
-                <p>店長が横から声をかける。在庫表も今日中に更新したい。ひよりは同じ笑顔で「大丈夫です」。莉子に片付けのフォローを頼まれても、また「大丈夫」。</p>
-                <p>三つの「大丈夫です」に合わせ、画面右上に作業名が一つずつ積み重なる。自分の発注作業だけが、画面の下へ押しやられる。</p>
+              <section class="plot-scene" aria-labelledby="long-film-pivot">
+                <h5 id="long-film-pivot">中盤｜相手への問いを自分への問いに変える</h5>
+                <p class="plot-dialogue">「あの人は、戻ってくるの？」</p>
+                <p>「吊るされた男」のカードを開いたあと、次の問いに変わります。</p>
+                <p class="plot-dialogue">「私は、いつまでここで待つつもりなんだろう」</p>
+                <p>相手の本心や未来を断定せず、主人公が自分の気持ちへ目を向ける転換点として設計しています。</p>
               </section>
-              <section class="plot-scene" aria-labelledby="plot-scene-3">
-                <h5 id="plot-scene-3">1:10–2:10｜褒め言葉が逃げ道をふさぐ</h5>
-                <p>木村は「ひよりなら安心だね」と言って退勤する。莉子が箱を見て首をかしげる。</p>
-                <p class="plot-dialogue"><strong>莉子</strong><br>「あれ、これ、ひよりさんの担当でしたっけ？」</p>
-                <p class="plot-dialogue"><strong>ひより</strong><br>「ううん。預かってるだけ」</p>
-                <p>画面に「発注締切20:00」の通知。今は19:08。ひよりは箱を脇へ寄せるが、木村に「無理です」と言わなかった自分を思い出して、また手を伸ばしてしまう。</p>
-                <p>ここでは叱責よりも、「頼られている」と思いたい気持ちが作業を増やすことを描く。</p>
-              </section>
-              <section class="plot-scene" aria-labelledby="plot-scene-4">
-                <h5 id="plot-scene-4">2:10–3:10｜いつもの解決方法が壊れる</h5>
-                <p>19:28。ひよりは片手で在庫表、片手で発注画面を操作しようとする。商品の数量を一桁打ち間違え、慌てて戻す。</p>
-                <p>キーボードの音、レジ締めの音、紙をめくる音が重なり、BGMは薄くなる。時計は19:34。作業の数は一つも減っていない。</p>
-                <p class="plot-dialogue"><strong>ひより（心の声）</strong><br>「早くやれば、何とかなると思ってた」</p>
-                <p>「頑張れば解決する」という主人公のいつもの行動を、一度失敗させる場面。</p>
-              </section>
-              <section class="plot-scene" aria-labelledby="plot-scene-5">
-                <h5 id="plot-scene-5">3:10–4:00｜後輩への助言が自分に返ってくる</h5>
-                <p>莉子が片付け用具とチェック表を持ってくる。</p>
-                <p class="plot-dialogue"><strong>莉子</strong><br>「これとこれ、どっちを先にすればいいですか？」</p>
-                <p class="plot-dialogue"><strong>ひより</strong><br>「店長に聞いてみたら？」</p>
-                <p class="plot-dialogue"><strong>莉子</strong><br>「え、聞いていいんですか？」</p>
-                <p class="plot-dialogue"><strong>ひより</strong><br>「……聞いて、いいんだよ」</p>
-                <p>その言葉を口にしたひよりの手が止まる。レシートの箱、発注画面、店長室の扉を短く切り返す。「後輩には許したことを、自分には許していなかった」と気づく瞬間。</p>
-              </section>
-              <section class="plot-scene" aria-labelledby="plot-scene-6">
-                <h5 id="plot-scene-6">4:00–5:20｜言い返すのではなく、選択肢を出す</h5>
-                <p>19:46。冒頭の場面に戻る。ひよりは店長室の前で二回ノックする。</p>
-                <p class="plot-dialogue"><strong>ひより</strong><br>「店長、全部は時間内に終わりません。優先順位を確認させてください」</p>
-                <p class="plot-dialogue"><strong>店長</strong><br>「今になって、終わらないって言うの？」</p>
-                <p>少し沈黙。ひよりは「すみません、やります」と言いかけて止める。</p>
-                <p class="plot-dialogue"><strong>ひより</strong><br>「相談が遅くなったのは私です。発注は20時で締まります。在庫表とレシート整理も残っています。発注を先にしていいですか」</p>
-                <p class="plot-dialogue"><strong>店長</strong><br>「……発注を先に。在庫表は明日。レシートは木村さんに確認して」</p>
-                <p>叱られずに済む結末にはしない。主人公は注意されるが、自分が抱えたタスクを明確にし、相手から優先順位を引き出せる。最初の「全部は終わりません」が、投げ出す言葉ではなく相談の始まりに変わる。</p>
-              </section>
-              <section class="plot-scene plot-ending" aria-labelledby="plot-scene-7">
-                <h5 id="plot-scene-7">5:20–6:00｜片付かなかった箱</h5>
-                <p>ひよりは発注画面を開く。時刻は19:52。送信完了の表示が出る。大げさな成功の音は入れない。</p>
-                <p>莉子が廊下の向こうからこちらを見る。ひよりは笑う代わりに小さく息を吐く。</p>
-                <p>レシートの箱は、まだ机の上にある。ひよりは一枚の付箋を貼る。</p>
-                <p class="plot-dialogue">「木村さんへ。明日の朝、一緒に確認お願いします」</p>
-                <p>カメラは箱から手を離すひよりの指先で止まる。最後の一文は画面には出さず、余白を残して暗転。</p>
+              <section class="plot-scene" aria-labelledby="long-film-ending">
+                <h5 id="long-film-ending">終盤｜映像の意味を残したままCTAへ</h5>
+                <p>ランプが灯るシーンを挟み、物語の余韻を切らずに「夜間受付」の紹介へ移行。決め台詞では暗転後の文字演出と声を合わせています。</p>
+                <p class="plot-dialogue">「その恋、一旦お預かりします。」</p>
               </section>
             </div>
           </details>
-
-          <section class="plot-scene" aria-labelledby="plot-craft-title">
-            <h5 id="plot-craft-title">構成・演出で意識したこと</h5>
+          <section class="plot-scene" aria-labelledby="long-film-workflow">
+            <h5 id="long-film-workflow">制作方法｜企画・台本から完成動画まで</h5>
             <div class="plot-craft">
-              <div><strong>フックと回収</strong><p>冒頭で「全部は終わりません」を見せ、終盤で同じ台詞の意味を変える。結末を隠すのではなく、理由を見たくなる構成。</p></div>
-              <div><strong>小道具の伏線</strong><p>レシート箱は「他人の仕事を抱える」象徴。最後まで箱を消さず、付箋で責任の持ち方が変わったことを示す。</p></div>
-              <div><strong>時間の圧力</strong><p>19:08 → 19:28 → 19:46 → 19:52と時刻を限定して表示。説明台詞を増やさず、締切が迫る緊張感を作る。</p></div>
-              <div><strong>セリフに頼りすぎない</strong><p>作業名が積み重なる画面、止まる指、重なる作業音、短い無音で感情を伝える。ナレーションで心情を説明しすぎない。</p></div>
+              <div><strong>01｜物語の設計</strong><p>対象者の情景、冒頭の引き、転換点、結末と案内の意味を先に整理する。</p></div>
+              <div><strong>02｜秒数付き台本</strong><p>ナレーション・字幕・画面・間・効果音をタイムコードで結び、工程を分解する。</p></div>
+              <div><strong>03｜素材と映像演出</strong><p>既存の画像を活かし、必要な箇所だけ生成動画やカード反転演出を組み合わせる。</p></div>
+              <div><strong>04｜最終チェック</strong><p>文字の可読性、音と映像の同期、演出のつながりを確認し、版を重ねて仕上げる。</p></div>
             </div>
-            <p class="sample-note">これはYouTube向けの企画書・プロット・演出台本の自主制作例です。尺と演出は制作前の設計値で、完成動画・公開実績・視聴維持率を示すものではありません。</p>
+            <p class="sample-note">自らの制作工程を説明できる自主制作の創作動画です。YouTubeでの公開実績、視聴維持率、受託案件の納品実績として提示するものではありません。</p>
           </section>
         </article>
 
@@ -1160,7 +1110,7 @@
           <p class="sample-note">参考元の演出を研究して組み直した自主制作です。元動画の素材や制作実績ではありません。</p>
         </article>
 
-        <h3 class="sub-head" id="works-shorts">ショート動画</h3>
+        <h3 class="sub-head" id="works-shorts">ショート動画作例</h3>
         <div class="shorts">
           <figure class="short">
             <div class="frame">
