@@ -457,6 +457,74 @@
         .short-script-video { max-width: 230px; margin: 0 auto; }
       }
 
+      /* YouTube企画・プロットの提案書レイアウト */
+      .plot-hook {
+        background: var(--c-bg);
+        border-left: 3px solid var(--c-accent);
+        padding: 20px 22px;
+        margin: 24px 0 !important;
+        font-family: var(--f-head);
+        line-height: 2;
+      }
+      .plot-hook strong { font-size: 1.2em; }
+      .plot-pitch, .plot-creative, .plot-craft {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 26px;
+        margin: 24px 0;
+      }
+      .plot-pitch > div, .plot-creative > div, .plot-craft > div { min-width: 0; }
+      .plot-pitch h5, .plot-creative h5 {
+        margin: 0 0 10px;
+        font-size: 15px;
+        color: var(--c-accent);
+        line-height: 1.6;
+      }
+      .plot-creative { border-top: 1px solid var(--c-rule); padding-top: 24px; }
+      .plot-creative p, .plot-pitch p, .plot-craft p { margin: 0 0 10px; line-height: 1.85; }
+      .plot-first20 { margin-top: 25px; }
+      .plot-opening {
+        border: 1px solid var(--c-rule);
+        padding: 22px 24px;
+      }
+      .plot-opening p { margin-bottom: 12px; }
+      .plot-stamp {
+        display: inline-block;
+        font-size: 12px;
+        color: var(--c-accent);
+        font-weight: 700;
+        margin-right: 10px;
+        font-variant-numeric: tabular-nums;
+      }
+      .story-map {
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none;
+        display: grid;
+        gap: 0;
+      }
+      .story-map li {
+        display: grid;
+        grid-template-columns: 100px minmax(0, 1fr);
+        gap: 18px;
+        padding: 14px 0 !important;
+        margin: 0 !important;
+        border-bottom: 1px solid var(--c-rule);
+      }
+      .story-map .story-time { font-size: 13px; font-weight: 600; color: var(--c-accent); font-variant-numeric: tabular-nums; }
+      .story-map strong { display: block; margin-bottom: 5px; }
+      .story-map li div span { display: block; line-height: 1.8; }
+      .plot-craft { gap: 18px 24px; }
+      .plot-craft > div { border-top: 1px solid var(--c-rule); padding-top: 12px; }
+      .plot-craft strong { display: block; margin-bottom: 7px; color: var(--c-accent); }
+      .plot-craft p { font-size: 14px; }
+      @media (max-width: 599px) {
+        .plot-pitch, .plot-creative, .plot-craft { grid-template-columns: 1fr; gap: 12px; }
+        .story-map li { grid-template-columns: 1fr; gap: 3px; }
+        .plot-opening { padding: 18px 14px; }
+        .plot-hook { padding: 16px; }
+      }
+
       /* ---------- 作品（ショート動画） ---------- */
       .shorts {
         display: grid;
@@ -791,68 +859,132 @@
 
         <h3 class="sub-head" id="works-plots">YouTube企画・プロット</h3>
         <article class="plot-sample" aria-labelledby="sample-plot-title">
-          <p class="sample-label">自主制作サンプル／未公開・受託実績ではありません</p>
+          <p class="sample-label">YouTubeドラマ企画・プロット／自主制作のフィクション／未公開</p>
           <h4 id="sample-plot-title">全部は終わりません</h4>
-          <p class="plot-intro">想定：約6分の職場ドラマ</p>
-          <p class="plot-characters">登場：ひより（28歳・主人公）／莉子（22歳・後輩）／木村（先輩）／店長</p>
+          <p class="plot-intro">職場ドラマ・約6分／「断れない人」が、初めて仕事の優先順位を相談する話</p>
+          <p class="plot-characters">登場人物：ひより（28歳・主人公）／莉子（22歳・後輩）／木村（先輩）／店長</p>
+          <p class="plot-hook">発注締切まで、あと14分。<br>今日も全部「大丈夫です」と答えてきた人が、初めて口にする。<br><strong>「全部は、終わりません」</strong></p>
+          <div class="plot-pitch">
+            <div>
+              <h5>誰に、何を届ける企画か</h5>
+              <p>対象は、頼まれると断れず、仕事を抱え込みがちな人。主人公を単に「断れる人」に変えるのではなく、<strong>引き受けた仕事の優先順位を、相手と決め直す</strong>という小さな変化を描きます。</p>
+            </div>
+            <div>
+              <h5>視聴後に残したい感情</h5>
+              <p>理不尽な上司を言い負かす爽快感よりも、「言ってもいいんだ」という安堵。誰かを悪役にしきらず、職場で実際に起こりそうな緊張感を残して終えます。</p>
+            </div>
+          </div>
+          <div class="plot-creative">
+            <div>
+              <h5>タイトル案</h5>
+              <p><strong>第一候補：</strong>「全部やります」と言い続けた人が、初めて言い返した日</p>
+              <p>別案：「仕事を断れない28歳。締切14分前に言ったひと言」</p>
+            </div>
+            <div>
+              <h5>サムネイル設計</h5>
+              <p>左に「19:46」の時計と未処理のレシート箱。右に主人公の顔。コピーは<strong>「全部は無理です」</strong>だけ。登場人物や説明文を詰め込まず、状況と葛藤を一目で伝える構成。</p>
+            </div>
+          </div>
+
+          <section class="plot-scene plot-first20" aria-labelledby="plot-opening-title">
+            <h5 id="plot-opening-title">冒頭20秒｜実際の台本・演出例</h5>
+            <div class="plot-opening">
+              <p><span class="plot-stamp">00:00</span> <strong>【映像】</strong> 黒画面に電子音。白文字で「19:46」。次に「発注締切 20:00」。</p>
+              <p><span class="plot-stamp">00:04</span> <strong>【映像】</strong> 主人公の手元。未入力の発注画面と、横に積まれた他人のレシート箱。</p>
+              <p class="plot-dialogue"><strong>店長</strong><br>「今になって、終わらないって言うの？」</p>
+              <p class="plot-dialogue"><strong>ひより</strong><br>「はい。全部は、終わりません」</p>
+              <p><span class="plot-stamp">00:14</span> <strong>【演出】</strong> BGMを止め、無音を一拍。主人公の顔で静止。</p>
+              <p><span class="plot-stamp">00:17</span> <strong>【画面】</strong> 「90分前」。音を切り替え、何も起きていない日常へ戻る。</p>
+            </div>
+            <p class="sample-note">結末の一言を冒頭に置き、「そこに至るまで何があったのか」を視聴理由にするコールドオープンです。最初に答えの一部を見せ、その意味を本編で変えていきます。</p>
+          </section>
+
+          <section class="plot-scene" aria-labelledby="plot-structure-title">
+            <h5 id="plot-structure-title">6分の構成｜7つのビートと視聴者の疑問</h5>
+            <ol class="story-map">
+              <li><span class="story-time">0:00–0:20</span><div><strong>① 結末の先出し</strong><span>「なぜ、今になって言えた？」という問いを作る。締切時計と主人公の一言を見せ、理由は伏せる。</span></div></li>
+              <li><span class="story-time">0:20–1:10</span><div><strong>② 「大丈夫です」の積み重ね</strong><span>笑顔で引き受けるたび、画面のタスクが増える。「この人はいつ限界になる？」という予感へ。</span></div></li>
+              <li><span class="story-time">1:10–2:10</span><div><strong>③ 断れないことの代償</strong><span>自分の発注締切が20時と判明。頼んだ先輩は帰り、責任だけが手元に残る。</span></div></li>
+              <li><span class="story-time">2:10–3:10</span><div><strong>④ ひとりで何とかしようとする</strong><span>並行作業を試みるが入力ミスに気づき、余計に時間を失う。いつもの方法が通じない。</span></div></li>
+              <li><span class="story-time">3:10–4:00</span><div><strong>⑤ 後輩の質問が転換点</strong><span>「どっちを先にすればいいですか？」。後輩へ言った「聞いていいんだよ」が、自分に返ってくる。</span></div></li>
+              <li><span class="story-time">4:00–5:20</span><div><strong>⑥ 店長との交渉</strong><span>すぐには受け入れてもらえない。主人公が締切と残作業を具体的に伝え、優先順位を決め直す。</span></div></li>
+              <li><span class="story-time">5:20–6:00</span><div><strong>⑦ 冒頭の意味を回収</strong><span>19:52に発注完了。「全部は終わらなかった」けれど、ひとりで抱える状態は変わっている。</span></div></li>
+            </ol>
+          </section>
 
           <details class="plot-details">
-            <summary>プロット全文を読む</summary>
+            <summary>シーン別プロットとセリフを詳しく読む</summary>
             <div class="detail-body">
-          <section class="plot-scene" aria-labelledby="plot-scene-1">
-            <h5 id="plot-scene-1">0:00｜冒頭</h5>
-            <p>閉店後のレジ前。シャッターの音。</p>
-            <p>ひよりだけがモップを動かしている。</p>
-            <p class="plot-dialogue"><strong>ひより（心の声）</strong><br>「今日も、私だけ。……いや、今日“も”って何だ」</p>
-            <p>足元に、他人のレシート整理の箱。自分の発注作業は未着手のまま。</p>
-          </section>
-
-          <section class="plot-scene" aria-labelledby="plot-scene-2">
-            <h5 id="plot-scene-2">0:20｜展開</h5>
-            <p class="plot-dialogue"><strong>木村</strong><br>「ひよりちゃん、ごめん！これ、ちょっとだけ見といて」</p>
-            <p class="plot-dialogue"><strong>ひより</strong><br>「いいですよ！」（即答）</p>
-            <p class="plot-dialogue"><strong>店長</strong><br>「在庫表、今日中に更新できる？」</p>
-            <p class="plot-dialogue"><strong>ひより</strong><br>「あ、はい」</p>
-            <p>休憩室で同僚から「断れなくて偉いよね」と言われる。笑顔で返すが、手が止まる。</p>
-            <p class="plot-dialogue"><strong>ひより</strong><br>「だって、断ったら嫌な人になるじゃないですか」</p>
-            <p>スマホには、自分の発注締切「20時」の通知が積み重なる。</p>
-          </section>
-
-          <section class="plot-scene" aria-labelledby="plot-scene-3">
-            <h5 id="plot-scene-3">2:30｜転換</h5>
-            <p class="plot-dialogue"><strong>莉子</strong><br>「ひよりさん、これとこれ、どっちを先に終わらせればいいですか？」</p>
-            <p class="plot-dialogue"><strong>ひより</strong><br>「え……それ、店長に聞いたら」</p>
-            <p class="plot-dialogue"><strong>莉子</strong><br>「聞いていいんですか？」</p>
-            <p>ひよりは少し黙る。</p>
-            <p class="plot-dialogue"><strong>ひより</strong><br>「……聞いて、いいんだよ」</p>
-            <p>言った瞬間、自分の言葉が自分に刺さる。通知画面の「20時」を見る。</p>
-          </section>
-
-          <section class="plot-scene" aria-labelledby="plot-scene-4">
-            <h5 id="plot-scene-4">4:40｜結末</h5>
-            <p>店長室の前で深呼吸。小さく二度ノックする。</p>
-            <p class="plot-dialogue"><strong>ひより</strong><br>「店長、全部は時間内に終わりません。どれを先にしますか」</p>
-            <p>店長は画面から目を離さない。</p>
-            <p class="plot-dialogue"><strong>店長</strong><br>「……今、言う？　もう20時前だよ」</p>
-            <p>空気が固まる。ひよりの指先が震える。いつもなら「すみません、やります」が出る場面。</p>
-            <p class="plot-dialogue"><strong>ひより</strong><br>「今だから言います。発注が20時締切で、在庫表と木村さんの分、全部は無理です」</p>
-            <p>店長がため息をつく。キーボードの音が止まる。</p>
-            <p class="plot-dialogue"><strong>店長</strong><br>「……発注、先にやって。在庫表は明日の朝」</p>
-            <p>「ありがとうございます」を言いかけて、ひよりは飲み込む。</p>
-            <p class="plot-dialogue"><strong>ひより</strong><br>「はい。……そうします」</p>
-            <p>部屋を出ると、莉子が小さく親指を立てる。ひよりは笑い返せず、ただ頷く。</p>
-          </section>
-
-          <section class="plot-scene plot-ending" aria-labelledby="plot-scene-last">
-            <h5 id="plot-scene-last">ラスト</h5>
-            <p>発注画面を開く。送信ボタンを押した時刻は19時52分。</p>
-            <p>木村のレシートの箱に付箋を一枚。</p>
-            <p class="plot-dialogue">「明日の朝、一緒にやりましょう」</p>
-          </section>
-
-          <p class="sample-note">構成の狙い：レシートの箱と20時締切の通知で負担を可視化。後輩との会話を転換点にし、店長の渋い反応を越えて優先順位を伝える小さな一歩で終える。再生数や受注成果を示すものではありません。</p>
+              <section class="plot-scene" aria-labelledby="plot-scene-1">
+                <h5 id="plot-scene-1">0:00–0:20｜締切14分前のコールドオープン</h5>
+                <p>電子音。スマートフォンの画面に19:46。発注システムの画面には赤字で「締切 20:00」。レシートの箱が入力欄の手前をふさいでいる。</p>
+                <p class="plot-dialogue"><strong>店長</strong><br>「今になって、終わらないって言うの？」</p>
+                <p class="plot-dialogue"><strong>ひより</strong><br>「はい。全部は、終わりません」</p>
+                <p>店長が何かを言いかけるところで音を止める。画面は「90分前」へ。</p>
+              </section>
+              <section class="plot-scene" aria-labelledby="plot-scene-2">
+                <h5 id="plot-scene-2">0:20–1:10｜「はい」が三つ増える</h5>
+                <p>18:16。店内はまだ忙しい。ひよりが伝票を整理していると、木村がレシートの箱を置く。</p>
+                <p class="plot-dialogue"><strong>木村</strong><br>「これ、ちょっとだけ見といてくれる？」</p>
+                <p class="plot-dialogue"><strong>ひより</strong><br>「大丈夫です」</p>
+                <p>店長が横から声をかける。在庫表も今日中に更新したい。ひよりは同じ笑顔で「大丈夫です」。莉子に片付けのフォローを頼まれても、また「大丈夫」。</p>
+                <p>三つの「大丈夫です」に合わせ、画面右上に作業名が一つずつ積み重なる。自分の発注作業だけが、画面の下へ押しやられる。</p>
+              </section>
+              <section class="plot-scene" aria-labelledby="plot-scene-3">
+                <h5 id="plot-scene-3">1:10–2:10｜褒め言葉が逃げ道をふさぐ</h5>
+                <p>木村は「ひよりなら安心だね」と言って退勤する。莉子が箱を見て首をかしげる。</p>
+                <p class="plot-dialogue"><strong>莉子</strong><br>「あれ、これ、ひよりさんの担当でしたっけ？」</p>
+                <p class="plot-dialogue"><strong>ひより</strong><br>「ううん。預かってるだけ」</p>
+                <p>画面に「発注締切20:00」の通知。今は19:08。ひよりは箱を脇へ寄せるが、木村に「無理です」と言わなかった自分を思い出して、また手を伸ばしてしまう。</p>
+                <p>ここでは叱責よりも、「頼られている」と思いたい気持ちが作業を増やすことを描く。</p>
+              </section>
+              <section class="plot-scene" aria-labelledby="plot-scene-4">
+                <h5 id="plot-scene-4">2:10–3:10｜いつもの解決方法が壊れる</h5>
+                <p>19:28。ひよりは片手で在庫表、片手で発注画面を操作しようとする。商品の数量を一桁打ち間違え、慌てて戻す。</p>
+                <p>キーボードの音、レジ締めの音、紙をめくる音が重なり、BGMは薄くなる。時計は19:34。作業の数は一つも減っていない。</p>
+                <p class="plot-dialogue"><strong>ひより（心の声）</strong><br>「早くやれば、何とかなると思ってた」</p>
+                <p>「頑張れば解決する」という主人公のいつもの行動を、一度失敗させる場面。</p>
+              </section>
+              <section class="plot-scene" aria-labelledby="plot-scene-5">
+                <h5 id="plot-scene-5">3:10–4:00｜後輩への助言が自分に返ってくる</h5>
+                <p>莉子が片付け用具とチェック表を持ってくる。</p>
+                <p class="plot-dialogue"><strong>莉子</strong><br>「これとこれ、どっちを先にすればいいですか？」</p>
+                <p class="plot-dialogue"><strong>ひより</strong><br>「店長に聞いてみたら？」</p>
+                <p class="plot-dialogue"><strong>莉子</strong><br>「え、聞いていいんですか？」</p>
+                <p class="plot-dialogue"><strong>ひより</strong><br>「……聞いて、いいんだよ」</p>
+                <p>その言葉を口にしたひよりの手が止まる。レシートの箱、発注画面、店長室の扉を短く切り返す。「後輩には許したことを、自分には許していなかった」と気づく瞬間。</p>
+              </section>
+              <section class="plot-scene" aria-labelledby="plot-scene-6">
+                <h5 id="plot-scene-6">4:00–5:20｜言い返すのではなく、選択肢を出す</h5>
+                <p>19:46。冒頭の場面に戻る。ひよりは店長室の前で二回ノックする。</p>
+                <p class="plot-dialogue"><strong>ひより</strong><br>「店長、全部は時間内に終わりません。優先順位を確認させてください」</p>
+                <p class="plot-dialogue"><strong>店長</strong><br>「今になって、終わらないって言うの？」</p>
+                <p>少し沈黙。ひよりは「すみません、やります」と言いかけて止める。</p>
+                <p class="plot-dialogue"><strong>ひより</strong><br>「相談が遅くなったのは私です。発注は20時で締まります。在庫表とレシート整理も残っています。発注を先にしていいですか」</p>
+                <p class="plot-dialogue"><strong>店長</strong><br>「……発注を先に。在庫表は明日。レシートは木村さんに確認して」</p>
+                <p>叱られずに済む結末にはしない。主人公は注意されるが、自分が抱えたタスクを明確にし、相手から優先順位を引き出せる。最初の「全部は終わりません」が、投げ出す言葉ではなく相談の始まりに変わる。</p>
+              </section>
+              <section class="plot-scene plot-ending" aria-labelledby="plot-scene-7">
+                <h5 id="plot-scene-7">5:20–6:00｜片付かなかった箱</h5>
+                <p>ひよりは発注画面を開く。時刻は19:52。送信完了の表示が出る。大げさな成功の音は入れない。</p>
+                <p>莉子が廊下の向こうからこちらを見る。ひよりは笑う代わりに小さく息を吐く。</p>
+                <p>レシートの箱は、まだ机の上にある。ひよりは一枚の付箋を貼る。</p>
+                <p class="plot-dialogue">「木村さんへ。明日の朝、一緒に確認お願いします」</p>
+                <p>カメラは箱から手を離すひよりの指先で止まる。最後の一文は画面には出さず、余白を残して暗転。</p>
+              </section>
             </div>
           </details>
+
+          <section class="plot-scene" aria-labelledby="plot-craft-title">
+            <h5 id="plot-craft-title">構成・演出で意識したこと</h5>
+            <div class="plot-craft">
+              <div><strong>フックと回収</strong><p>冒頭で「全部は終わりません」を見せ、終盤で同じ台詞の意味を変える。結末を隠すのではなく、理由を見たくなる構成。</p></div>
+              <div><strong>小道具の伏線</strong><p>レシート箱は「他人の仕事を抱える」象徴。最後まで箱を消さず、付箋で責任の持ち方が変わったことを示す。</p></div>
+              <div><strong>時間の圧力</strong><p>19:08 → 19:28 → 19:46 → 19:52と時刻を限定して表示。説明台詞を増やさず、締切が迫る緊張感を作る。</p></div>
+              <div><strong>セリフに頼りすぎない</strong><p>作業名が積み重なる画面、止まる指、重なる作業音、短い無音で感情を伝える。ナレーションで心情を説明しすぎない。</p></div>
+            </div>
+            <p class="sample-note">これはYouTube向けの企画書・プロット・演出台本の自主制作例です。尺と演出は制作前の設計値で、完成動画・公開実績・視聴維持率を示すものではありません。</p>
+          </section>
         </article>
 
         <h3 class="sub-head" id="works-short-scripts">ショート台本</h3>
