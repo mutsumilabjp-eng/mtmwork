@@ -458,7 +458,23 @@
       }
 
       /* 長尺動画作例｜埋め込み・解説 */
-      .long-video-layout { margin: 24px 0; }
+      .long-video-layout { display: block; min-width: 0; margin: 24px 0; }
+      .long-video-player {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-bottom: 28px;
+      }
+      .long-video-player iframe {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border: 0;
+        background: #141514;
+      }
+      .long-video-notes { width: 100%; min-width: 0; }
       .long-video-notes h5 { margin: 0 0 15px; color: var(--c-accent); font-family: var(--f-head); font-size: 17px; }
       .long-video-notes p { margin: 0 0 15px; line-height: 1.85; font-size: 14px; }
       .long-video-notes strong { color: var(--c-accent); }
@@ -975,6 +991,9 @@
           <p class="plot-intro">5分8秒／1920×1080／24fps／横型の長尺ストーリー動画</p>
           <p>3ヶ月間、既読のまま返事を待っている人の夜を描く物語です。視聴者の共感から入り、タロットの一枚をきっかけに「相手は戻ってくるのか」から「私はどうしたいのか」へ問いを転換。最後は物語の中で意味を持った灯りを、夜間受付の案内へつなげています。</p>
           <div class="long-video-layout">
+            <div class="long-video-player">
+              <iframe src="https://drive.google.com/file/d/1SzRecxo6ZHmowUQtJk7WpcKipqI3Shd-/preview" title="長尺動画作例「既読のまま、三ヶ月。」" width="1920" height="1080" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
             <div class="long-video-notes">
               <h5>台本と映像を一体で設計する</h5>
               <p><strong>秒単位の演出台本。</strong>ナレーションの実測尺に合わせて、字幕・場面転換・効果音の時刻を調整。音声は1文ずつ管理しています。</p>
