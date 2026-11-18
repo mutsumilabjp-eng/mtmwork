@@ -458,16 +458,10 @@
       }
 
       /* 長尺動画作例｜埋め込み・解説 */
-      .long-video-layout { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(235px, 1fr); gap: 28px; align-items: start; margin: 26px 0; }
-      .long-video-frame { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--c-rule); background: #191918; }
-      .long-video-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
-      .long-video-link { margin: 10px 0 0 !important; font-size: 14px; }
-      .long-video-link a { color: var(--c-accent); text-underline-offset: 4px; }
-      .long-video-player .sample-note { margin-top: 12px; font-size: 12px; }
+      .long-video-layout { margin: 24px 0; }
       .long-video-notes h5 { margin: 0 0 15px; color: var(--c-accent); font-family: var(--f-head); font-size: 17px; }
       .long-video-notes p { margin: 0 0 15px; line-height: 1.85; font-size: 14px; }
       .long-video-notes strong { color: var(--c-accent); }
-      @media (max-width: 799px) { .long-video-layout { grid-template-columns: 1fr; } }
 
       /* YouTube企画・プロットの提案書レイアウト */
       .plot-hook {
@@ -981,13 +975,6 @@
           <p class="plot-intro">5分8秒／1920×1080／24fps／横型の長尺ストーリー動画</p>
           <p>3ヶ月間、既読のまま返事を待っている人の夜を描く物語です。視聴者の共感から入り、タロットの一枚をきっかけに「相手は戻ってくるのか」から「私はどうしたいのか」へ問いを転換。最後は物語の中で意味を持った灯りを、夜間受付の案内へつなげています。</p>
           <div class="long-video-layout">
-            <div class="long-video-player">
-              <div class="long-video-frame">
-                <iframe src="https://drive.google.com/file/d/1SzRecxo6ZHmowUQtJk7WpcKipqI3Shd-/preview" title="長尺動画作例「既読のまま、三ヶ月。」" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe>
-              </div>
-              <p class="long-video-link"><a href="https://drive.google.com/file/d/1SzRecxo6ZHmowUQtJk7WpcKipqI3Shd-/view" target="_blank" rel="noopener noreferrer">完成動画をGoogle Driveで開く ↗</a></p>
-              <p class="sample-note">Driveの共有設定によっては視聴時にアクセス権限が必要になります。</p>
-            </div>
             <div class="long-video-notes">
               <h5>台本と映像を一体で設計する</h5>
               <p><strong>秒単位の演出台本。</strong>ナレーションの実測尺に合わせて、字幕・場面転換・効果音の時刻を調整。音声は1文ずつ管理しています。</p>
