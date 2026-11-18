@@ -525,6 +525,24 @@
         .plot-hook { padding: 16px; }
       }
 
+      /* 会話ベースの実装手法と導線優先の説明 */
+      .craft-build {
+        margin: 26px 0 20px;
+        padding: 23px 24px;
+        border: 1px solid var(--c-rule);
+        background: var(--c-bg);
+      }
+      .craft-build h4, .craft-priority h4 {
+        margin: 0 0 12px;
+        font-family: var(--f-head);
+        font-size: 18px;
+        line-height: 1.7;
+      }
+      .craft-build p, .craft-priority p { margin: 0 0 12px; line-height: 1.88; }
+      .craft-build p:last-child, .craft-priority p:last-child { margin-bottom: 0; }
+      .craft-priority { border-left: 3px solid var(--c-accent); padding: 4px 0 4px 20px; margin: 22px 0 26px; }
+      @media (max-width: 599px) { .craft-build { padding: 20px 16px; } .craft-priority { padding-left: 13px; } }
+
       /* LP / コピー / SEO とバナー制作の考え方 */
       .craft-section {
         margin-top: 44px;
@@ -777,7 +795,7 @@
         <p class="title">YouTubeの企画・構成／ショート動画／Web・LP制作</p>
         <div class="rule-v" aria-hidden="true"></div>
         <p class="catch">何を、どんな順番で伝えるか。<br />企画から制作まで対応します。</p>
-        <p class="hero-note">動画・SNSは継続的な制作を中心に。<br />サイト・LPは単発のご依頼にも対応しています。</p>
+        <p class="hero-note">動画・SNSは継続的な制作を中心に。<br />サイト・LPは単発のご依頼にも対応しています。<br />素材と要件が揃う制作例規模の案件では、分野を問わず最短1日で納品前確認まで進めます。</p>
       </header>
 
       <!-- サービス紹介 -->
@@ -809,7 +827,7 @@
               <h3>サイト・LP制作</h3>
             </div>
             <div>
-              <p>目的と読者・流入経路を整理し、文章と構成を先に設計してからデザイン・実装します。検索流入を想定するページではSEOの基本設計も意識し、公開後の行動につながる導線を整えます。</p>
+              <p>何より重視するのは、見た目よりも「読者が次に何をするか」という導線です。ChatGPTのチャットだけでも企画・文章・デザイン・実装まで構築可能。AIにありがちな画一的な表現を避け、SEOと行動導線を踏まえて仕上げます。</p>
               <a class="more" href="#works-sites">作品例を見る →</a>
             </div>
           </article>
@@ -851,7 +869,7 @@
               <h3 class="site-name">飲食の仕事｜飲食業界向け転職情報サイト</h3>
               <span class="tag">Webサイト・LP制作</span>
             </div>
-            <p class="work-note">担当：企画・構成・文章・デザイン・実装。飲食現場での実体験を起点に、記事から転職相談への導線を設計。</p>
+            <p class="work-note">制作手法：ChatGPTのチャット上で企画・構成・文章・デザイン・実装まで構築（Codex不使用）。飲食現場の実体験を起点に、記事から転職相談へ進む導線を設計。</p>
             <details>
               <summary><span class="d-label"></span><span class="d-sign" aria-hidden="true"></span></summary>
               <div class="site-body">
@@ -881,7 +899,7 @@
               <h3 class="site-name">転職情報サイト</h3>
               <span class="tag">動きのあるLP</span>
             </div>
-            <p class="work-note">工夫：求人票の曖昧な表現を、確認すべき具体的な質問へ整理。</p>
+            <p class="work-note">制作手法：ChatGPTのチャット上で企画・構成・デザイン・実装まで構築（Codex不使用）。求人票の曖昧な表現を具体的な確認項目へ整理。</p>
             <details>
               <summary><span class="d-label"></span><span class="d-sign" aria-hidden="true"></span></summary>
               <div class="site-body">
@@ -894,13 +912,23 @@
 
         <section class="craft-section" id="lp-process" aria-labelledby="lp-process-title">
           <p class="craft-eyebrow">制作の進め方｜Web・LP</p>
-          <h3 id="lp-process-title">デザインの前に、読者と文章を設計する。</h3>
-          <p>LPは見た目から作り始めません。誰が、何をきっかけにページへ来て、どの情報を読めば次の行動を選べるのかを整理します。広告向けLPと検索流入を想定した情報ページでは、求められる文章や導線を分けて考えています。</p>
+          <h3 id="lp-process-title">一番重視するのは、デザインより「導線」です。</h3>
+          <p>LPで先に決めるのは見た目ではなく、誰がどこから来て、どんな疑問を解消し、最後にどの行動を選ぶのか。読者が納得できる情報の順番と、無理のないCTAへの流れを設計してから文章とデザインを整えます。検索流入と広告流入では、見せる情報も導線も変えます。</p>
+          <div class="craft-build" aria-labelledby="chat-only-build-title">
+            <p class="craft-eyebrow">制作実例｜ChatGPTのみでWeb・LPを構築</p>
+            <h4 id="chat-only-build-title">Codexを使わず、ChatGPTのチャットだけでサイトを組み立てる。</h4>
+            <p>「飲食の仕事」と「佐藤の転職情報LP」は、どちらも<strong>ChatGPTのチャットだけで制作を進めた実例です。Codexは使用していません。</strong> 目的・構成・コピーを会話で詰め、HTML/CSSなどの実装指示を具体化。出力結果を確認し、レイアウトや言葉、導線の気になる点をその都度修正する方法で構築しました。</p>
+            <p>AIに一度依頼して完成を待つのではなく、何を作るかを分解し、細かな変更を重ねる進め方です。設計から実装までAIを使いこなしつつ、伝える内容や完成形は自分で判断します。</p>
+          </div>
+          <div class="craft-priority">
+            <h4>「AIっぽさ」を消すデザインにも対応。ただし目的は、見栄えを整えることだけではありません。</h4>
+            <p>量産的なSaaS風レイアウト、意味のない英字ラベルや飾り数字、抽象的なコピー、過剰なグラデーションや装飾を見直し、案件の世界観に合う余白・書体・写真・レイアウトへ調整します。一方で、どれほどデザインが美しくても、読者が次の行動を選べなければLPの役割を果たせません。<strong>「理解→納得→行動」まで迷わず進める導線</strong>を優先しています。</p>
+          </div>
           <ol class="craft-steps">
-            <li><strong>01｜目的と読者を整理</strong><span>問い合わせ・申込み・記事閲覧など、ページの役割を決める。流入元と読者の疑問、必要な情報を確認。</span></li>
+            <li><strong>01｜目的と読者・出口を決める</strong><span>検索・SNS・広告などの流入元から、読者の疑問・必要な情報・最終的なCTAまでを先に設計する。</span></li>
             <li><strong>02｜事実と素材を調べる</strong><span>公式資料・商品条件・利用の流れ・一次情報を照合。実績、意見、仮説、創作を混ぜない。</span></li>
             <li><strong>03｜文章と構成を先に作る</strong><span>ファーストビュー、見出し、本文、CTAを複数案から検討。先に原稿の筋道を通す。</span></li>
-            <li><strong>04｜デザインと素材を決める</strong><span>世界観、書体、余白、写真や動画の役割を設計。実素材を優先し、装飾のための素材を増やしすぎない。</span></li>
+            <li><strong>04｜デザインと素材を決める</strong><span>世界観、書体、余白、写真や動画を設計。AI的な画一レイアウトを避け、装飾よりも読みやすさと導線の明確さを優先する。</span></li>
             <li><strong>05｜実装して読み心地を確かめる</strong><span>HTML/CSS等で形にし、スマートフォンで読み順・CTA・文字サイズ・表示速度を確認。</span></li>
             <li><strong>06｜公開前の検査と修正</strong><span>誤記、リンク、必須表記、画像、レスポンシブ表示を確認。最後は自分の目で文章と画面を整える。</span></li>
           </ol>
@@ -918,7 +946,7 @@
               <p><strong>スマホと表示品質を確かめる。</strong>画像の重さや読みやすさ、情報の更新性も確認。検索順位を保証するものではなく、読み手と検索エンジンの双方が理解しやすいページを目指します。</p>
             </div>
           </div>
-          <p class="craft-footnote">AIで構成・見出し・実装の案を比較しながら、公開する文章の自然さと正確さは自分で確認・修正します。SEO施策の効果や検索順位の実績を示す説明ではありません。</p>
+          <p class="craft-footnote">制作領域を問わず、要件と素材が揃う案件は着手から最短1日で納品前の最終確認まで進めることを目指しています。制作範囲が大きい案件、外部確認・追加修正が必要な案件は個別に納期を調整します。AIの出力は自分で確認・修正し、SEO施策の効果や検索順位は保証しません。</p>
         </section>
 
         <h3 class="sub-head" id="works-plots">YouTube企画・プロット</h3>
@@ -1171,8 +1199,8 @@
         </div>
         <div class="about">
           <p>飲食店のキッチンで働きながら、副業でサイト・動画・画像の制作をしています。</p>
-          <p>AIで下書きと実装を進め、文章の表現と内容の事実確認は自分で行い仕上げます。</p>
-          <p>作って終わりにせず、公開後の導線まで見据えた設計を心がけています。</p>
+          <p>ChatGPTを使い、会話の中で構成・文章・デザイン・コードを段階的に組み立てます。飲食情報サイトと佐藤の転職LPはCodexを使わず、ChatGPTのチャットだけで制作した作例です。</p>
+          <p>AIらしい見た目を調整する技術以上に、読者の理解から問い合わせ・相談などの行動へつながる導線設計を重視しています。文章と画面は自分で確認し、必要な修正を行います。</p>
           <p>動画・SNS制作は継続的なご依頼を中心に、サイト・LP制作は単発のご相談にも対応します。ご連絡は、ご利用中のサービスのメッセージ機能からお願いします。</p>
           <dl class="about-list">
             <div class="about-row">
