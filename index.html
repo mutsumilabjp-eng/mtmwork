@@ -238,17 +238,15 @@
         border: 1px solid var(--c-rule);
       }
       /* 「飲食の仕事」作品プレビュー：掲載画像を軽量なHTMLで再現 */
-      .itk-preview { overflow: hidden; aspect-ratio: 2048 / 1337; background: #29312f; color: #f4f1e8; container-type: inline-size; }
-      .itk-preview-nav { display: flex; align-items: center; gap: 1.15cqw; height: 7.1%; padding: 0 2.2cqw; box-sizing: border-box; background: #f4f1eb; color: #242722; font-family: var(--f-head); font-size: 1.55cqw; }
-      .itk-preview-mark { display: inline-flex; justify-content: center; align-items: center; width: 3.4cqw; height: 3.4cqw; border: 1px solid #969a8d; font-size: 2cqw; transform: rotate(-6deg); }
-      .itk-preview-nav-right { margin-left: auto; font-size: 1.2cqw; color: #7c7a71; }
-      .itk-preview-hero { display: grid; grid-template-columns: 52% 48%; height: 92.9%; }
-      .itk-preview-copy { display: flex; flex-direction: column; min-width: 0; padding: 6.3cqw 4.2cqw 3.3cqw; box-sizing: border-box; }
+      .itk-preview { overflow: hidden; aspect-ratio: 2048 / 1335; background: #29312f; color: #f4f1e8; container-type: inline-size; }
+      .itk-preview-hero { display: grid; grid-template-columns: 52% 48%; height: 100%; }
+      .itk-preview-copy { display: flex; flex-direction: column; min-width: 0; padding: 1.8cqw 4.2cqw 3.3cqw; box-sizing: border-box; }
       .itk-preview-rule { border-top: 1px solid #81847e; margin-bottom: 2.5cqw; }
       .itk-preview-kicker { color: #b8a694; font-size: 1.25cqw; letter-spacing: 0.22em; white-space: nowrap; }
       .itk-preview-title { display: block; margin-top: 6.5cqw; font-family: var(--f-head); font-size: 4.8cqw; font-weight: 500; line-height: 1.43; letter-spacing: 0.025em; }
       .itk-preview-lead { display: block; margin-top: auto; font-family: var(--f-head); font-size: 2cqw; line-height: 1.95; }
       .itk-preview-desc { display: block; margin-top: 2.1cqw; font-size: 1.22cqw; line-height: 1.75; color: #d0d1cc; }
+      .itk-preview-cta { display: block; align-self: flex-start; margin-top: auto; padding-bottom: 1cqw; border-bottom: 1px solid #a48f7e; color: #d5ab87; font-size: 1.35cqw; }
       .itk-preview-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; min-width: 0; }
       .site-meta {
         display: flex;
@@ -915,15 +913,15 @@
             <a class="open" href="https://hoyu.pages.dev/" target="_blank" rel="noopener noreferrer">恋愛相談LPへ ↗</a>
           </div>
           <div class="site-work">
-            <div class="site-shot itk-preview" role="img" aria-label="飲食の仕事のトップページ。深緑の見出しパネルと飲食店の写真を組み合わせたデザイン">
-              <div class="itk-preview-nav"><span class="itk-preview-mark">飲</span><span>飲食の仕事</span><span class="itk-preview-nav-right">記事を読む</span></div>
+            <div class="site-shot itk-preview" role="img" aria-label="飲食の仕事のトップページ。提供されたスクリーンショットに合わせ、ヘッダーを外して深緑の見出しパネルと飲食店の写真を配置したプレビュー">
               <div class="itk-preview-hero">
                 <div class="itk-preview-copy">
                   <div class="itk-preview-rule"></div>
                   <span class="itk-preview-kicker">飲食の仕事をしている人へ</span>
                   <strong class="itk-preview-title">また、店のこと<br>を<br>考えてる。</strong>
                   <span class="itk-preview-lead">帰り道も、休みの日も。<br>「私が抜けたら、どうなるんだろう」って。</span>
-                  <span class="itk-preview-desc">店のことはよく分かる。だからこそ、自分のことを後回しにしてしまう。</span>
+                  <span class="itk-preview-desc">店のことはよく分かる。だからこそ、自分のことを後回しにしてしまう。そんなとき、少しだけ読んでほしい話を集めました。</span>
+                  <span class="itk-preview-cta">話を読む　↓</span>
                 </div>
                 <img class="itk-preview-photo" src="https://images.pexels.com/photos/32010784/pexels-photo-32010784.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="" loading="lazy" />
               </div>
