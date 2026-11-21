@@ -816,6 +816,12 @@
       .script-raw li { display: grid; grid-template-columns: 95px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 10px 0 !important; margin: 0 !important; border-bottom: 1px solid var(--c-rule); font-size: 14px; line-height: 1.7; }
       .script-raw time { font-size: 12px; color: var(--c-accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
       @media (max-width: 599px) { .script-raw li { grid-template-columns: 84px minmax(0, 1fr); gap: 9px; } }
+      .long-script-sample { border-top: 1px solid var(--c-rule); margin-top: 26px; padding-top: 22px; }
+      .long-script-sample h5 { font-family: var(--f-head); font-size: 18px; margin: 0 0 14px; }
+      .long-script-scene { padding: 16px 0; border-bottom: 1px solid var(--c-rule); }
+      .long-script-time { display: block; font-size: 13px; font-weight: 700; color: var(--c-accent); margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+      .long-script-dialogue { font-family: var(--f-head); font-size: 17px; line-height: 1.85; margin: 0 0 8px !important; }
+      .long-script-stage { font-size: 13px; color: var(--c-text-sub); line-height: 1.8; margin: 0 0 10px !important; }
     </style>
   </head>
   <body>
@@ -953,6 +959,25 @@
           <div class="long-video-layout">
             <div class="long-video-player">
               <iframe src="https://drive.google.com/file/d/1SzRecxo6ZHmowUQtJk7WpcKipqI3Shd-/preview" title="長尺動画作例「既読のまま、三ヶ月。」" width="1920" height="1080" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="long-script-sample" aria-label="長尺動画の演出台本抜粋">
+            <h5>台本・演出の抜粋</h5>
+            <div class="long-script-scene">
+              <span class="long-script-time">0:01–0:28｜冒頭</span>
+              <p class="long-script-dialogue">「既読のまま、三ヶ月。」<br>「午前2時14分。」</p>
+              <p class="long-script-stage">暗い部屋。スマートフォンの光だけが顔を照らす。</p>
+            </div>
+            <div class="long-script-scene">
+              <span class="long-script-time">2:19–3:09｜転換</span>
+              <p class="long-script-dialogue">「あの人は、戻ってくるの？」</p>
+              <p class="long-script-stage">タロット「吊るされた男」を開く。</p>
+              <p class="long-script-dialogue">「私は、いつまでここで待つつもりなんだろう」</p>
+            </div>
+            <div class="long-script-scene">
+              <span class="long-script-time">4:42–5:08｜結末</span>
+              <p class="long-script-stage">ランプの灯りから夜間受付の案内へ。暗転後、声と文字を重ねる。</p>
+              <p class="long-script-dialogue">「その恋、一旦お預かりします。」</p>
             </div>
           </div>
         </article>
