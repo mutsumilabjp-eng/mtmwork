@@ -264,44 +264,8 @@
         letter-spacing: 0.05em;
         color: var(--c-text-sub);
       }
-      .site-work details { margin-top: 16px; }
-      .site-work summary {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 52px;
-        border-top: 1px solid var(--c-rule);
-        border-bottom: 1px solid var(--c-rule);
-        cursor: pointer;
-        list-style: none;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 0.08em;
-        color: var(--c-text);
-      }
-      .site-work summary::-webkit-details-marker { display: none; }
-      .site-work summary:hover { background: var(--c-surface); }
-      .site-work .d-label::before { content: "詳細を見る"; }
-      .site-work details[open] .d-label::before { content: "詳細を閉じる"; }
-      .site-work .d-sign {
-        font-family: var(--f-head);
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 1;
-      }
-      .site-work .d-sign::before { content: "＋"; }
-      .site-work details[open] .d-sign::before { content: "－"; }
-      .site-body {
-        background: var(--c-surface);
-        border-bottom: 1px solid var(--c-rule);
-        padding: 24px;
-      }
-      .site-body p {
-        margin: 0;
-        max-width: 38em;
-      }
-      .site-body .open {
-        margin-top: 24px;
+      .site-work .open {
+        margin-top: 16px;
         display: inline-flex;
         align-items: center;
         height: 48px;
@@ -313,7 +277,7 @@
         letter-spacing: 0.1em;
         text-decoration: none;
       }
-      .site-body .open:hover { background: var(--c-text); }
+      .site-work .open:hover { background: var(--c-text); }
 
       .work-note {
         margin: 10px 0 0;
@@ -917,10 +881,7 @@
               <span class="tag">恋愛相談LP</span>
             </div>
             <p class="work-note">既読のまま進まない恋の悩みに寄り添い、LINEでの相談と特典案内へつなぐLPです。</p>
-            <div class="site-body">
-              <p>「既読のまま、三ヶ月。」という悩みから始まる、あかりの恋愛相談LPです。深夜の静けさを生かしたビジュアルで世界観を伝え、物語を読む体験からLINEの受付へつなげています。</p>
-              <a class="open" href="https://hoyu.pages.dev/" target="_blank" rel="noopener noreferrer">恋愛相談LPへ ↗</a>
-            </div>
+            <a class="open" href="https://hoyu.pages.dev/" target="_blank" rel="noopener noreferrer">恋愛相談LPへ ↗</a>
           </div>
           <div class="site-work">
             <div class="site-shot itk-preview" role="img" aria-label="飲食の仕事のトップページ。深緑の見出しパネルと飲食店の写真を組み合わせたデザイン">
@@ -940,14 +901,8 @@
               <h3 class="site-name">飲食の仕事｜飲食業界向け転職情報サイト</h3>
               <span class="tag">Webサイト・LP制作</span>
             </div>
-            <p class="work-note">ChatGPTのチャットだけで、企画・ライティング設計・サイト構築・デザイン・画像配置・公開まで一貫して制作した例。飲食現場の実体験を起点に、記事から転職相談への導線も設計。</p>
-            <details>
-              <summary><span class="d-label"></span><span class="d-sign" aria-hidden="true"></span></summary>
-              <div class="site-body">
-                <p>飲食店で働く人の悩みを、自身の現場経験をもとに記事にした情報サイトです。「辞めたいけれど自分が抜けたら店が回らない」「料理は好きでも、今の働き方は続けられない」などのテーマを扱い、トップページから悩み別の記事へ進める構成にしました。記事内では飲食業界向け転職サービスへの案内を自然に配置し、情報収集から相談までをつなげています。企画・構成・文章・デザイン・実装を担当しました。</p>
-                <a class="open" href="https://itk-work.pages.dev/" target="_blank" rel="noopener noreferrer">サイトを見る ↗</a>
-              </div>
-            </details>
+            <p class="work-note">飲食店で働く人の悩みに寄り添い、記事から転職相談へつなぐ情報サイトです。</p>
+            <a class="open" href="https://itk-work.pages.dev/" target="_blank" rel="noopener noreferrer">サイトを見る ↗</a>
           </div>
           <div class="site-work">
             <img class="site-shot" src="assets/mtmwork-assets/img-2.jpg" alt="相続情報サイトのトップページのスクリーンショットです" width="859" height="760" loading="lazy" />
@@ -955,14 +910,8 @@
               <h3 class="site-name">相続情報サイト</h3>
               <span class="tag">Webサイト制作</span>
             </div>
-            <p class="work-note">担当：企画・構成・デザイン・実装。記事からチェックへの導線を設計。</p>
-            <details>
-              <summary><span class="d-label"></span><span class="d-sign" aria-hidden="true"></span></summary>
-              <div class="site-body">
-                <p>相続の聞き書きを仕事にしている人の情報サイトです。家族の話を聞いて整理する活動を、記事コンテンツと無料の5問チェックで伝える構成にしました。企画・構成・デザイン・実装まで一貫して担当し、記事から無料チェック、そして相談先の検討へと進む導線を設計しています。煽らない文章トーンを全体で統一しました。</p>
-                <a class="open" href="https://saeki-souzoku.com/" target="_blank" rel="noopener noreferrer">サイトを見る ↗</a>
-              </div>
-            </details>
+            <p class="work-note">相続の聞き書きの活動を記事と無料チェックで紹介し、相談先の検討へつなぐ情報サイトです。</p>
+            <a class="open" href="https://saeki-souzoku.com/" target="_blank" rel="noopener noreferrer">サイトを見る ↗</a>
           </div>
           <div class="site-work">
             <img class="site-shot" src="assets/mtmwork-assets/img-3.jpg" alt="転職情報サイトのトップページのスクリーンショットです" width="859" height="760" loading="lazy" />
@@ -970,14 +919,8 @@
               <h3 class="site-name">転職情報サイト</h3>
               <span class="tag">動きのあるLP</span>
             </div>
-            <p class="work-note">ChatGPTのチャットだけで、企画・ライティング設計・LP構築・デザイン・画像配置・公開まで一貫して制作した例。求人票の曖昧な表現を具体的な確認項目へ整理。</p>
-            <details>
-              <summary><span class="d-label"></span><span class="d-sign" aria-hidden="true"></span></summary>
-              <div class="site-body">
-                <p>転職を考える人向けに、求人票の読み解き方をまとめた、動きのあるLPです。「人柄重視」「風通しの良い職場」など求人票によく見られる表現を取り上げ、面接で確認したい質問に置き換える構成にしました。先に見る3つの確認ポイントから、転職エージェントに相談する流れへ進む導線を設計しています。</p>
-                <a class="open" href="https://sato-job.app1008.workers.dev/" target="_blank" rel="noopener noreferrer">サイトを見る ↗</a>
-              </div>
-            </details>
+            <p class="work-note">求人票の曖昧な表現を面接で使える質問に変え、転職相談へつなぐLPです。</p>
+            <a class="open" href="https://sato-job.app1008.workers.dev/" target="_blank" rel="noopener noreferrer">LPを見る ↗</a>
           </div>
         </div>
 
