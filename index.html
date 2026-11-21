@@ -75,6 +75,7 @@
       a, button, summary {
         transition: color 0.2s, background-color 0.2s;
       }
+      a:link:not([class]), a:visited:not([class]) { color: var(--c-accent); }
       a:focus-visible, button:focus-visible, summary:focus-visible {
         outline: 2px solid var(--c-accent);
         outline-offset: 2px;
@@ -807,6 +808,14 @@
       @media (prefers-reduced-motion: reduce) {
         a, button, summary { transition: none; }
       }
+
+      .short-script-process { margin: 18px 0 24px; }
+      .short-script-process h5 { font-family: var(--f-head); color: var(--c-accent); font-size: 17px; margin: 0 0 8px; }
+      .short-script-process p { margin: 0; }
+      .script-raw { list-style: none; padding: 0 !important; margin: 0 !important; }
+      .script-raw li { display: grid; grid-template-columns: 95px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 10px 0 !important; margin: 0 !important; border-bottom: 1px solid var(--c-rule); font-size: 14px; line-height: 1.7; }
+      .script-raw time { font-size: 12px; color: var(--c-accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+      @media (max-width: 599px) { .script-raw li { grid-template-columns: 84px minmax(0, 1fr); gap: 9px; } }
     </style>
   </head>
   <body>
@@ -819,7 +828,7 @@
         <p class="title">YouTubeの企画・構成／ショート動画／Web・LP制作</p>
         <div class="rule-v" aria-hidden="true"></div>
         <p class="catch">何を、どんな順番で伝えるか。<br />企画から制作まで対応します。</p>
-        <p class="hero-note">動画・SNSは継続的な制作を中心に。<br />サイト・LPは単発のご依頼にも対応しています。<br />素材と要件が揃う制作例規模の案件では、分野を問わず最短1日で納品前確認まで進めます。</p>
+        <p class="hero-note">動画・SNSの継続制作、サイト・LPの単発制作に対応しています。</p>
       </header>
 
       <!-- サービス紹介 -->
@@ -831,7 +840,7 @@
               <h3>サイト・LP制作</h3>
             </div>
             <div>
-              <p>何より重視するのは、見た目よりも「読者が次に何をするか」という導線です。ChatGPTのチャットだけでも企画・文章・デザイン・実装まで構築可能。AIにありがちな画一的な表現を避け、SEOと行動導線を踏まえて仕上げます。</p>
+              <p>企画・文章・デザイン・実装・公開まで対応。読者が迷わず行動できる導線を設計します。</p>
               <a class="more" href="#works-sites">作品例を見る →</a>
             </div>
           </article>
@@ -841,7 +850,7 @@
               <h3>YouTube企画・長尺動画</h3>
             </div>
             <div>
-              <p>冒頭の引き、物語の転換点、音と画面の演出、最後の案内まで設計します。秒数付きの演出台本から完成動画まで、制作例でご覧いただけます。</p>
+              <p>企画・台本・映像演出から完成動画まで制作します。</p>
               <a class="more" href="#works-plots">長尺動画作例を見る →</a>
             </div>
           </article>
@@ -851,7 +860,7 @@
               <h3>ショート動画</h3>
             </div>
             <div>
-              <p>フック、台本、演出設計、編集まで対応します。CapCutとClaude Codeを活用し、内容の確認と仕上げは自分で行います。継続的な制作のご相談も歓迎します。</p>
+              <p>台本から映像編集まで対応。冒頭の引きとテンポを重視します。</p>
               <a class="more" href="#works-short-scripts">作品例を見る →</a>
             </div>
           </article>
@@ -861,7 +870,7 @@
               <h3>バナー・SNS画像</h3>
             </div>
             <div>
-              <p>見る人・媒体・目的を先に決め、文字の優先順位と余白から設計。色・書体を絞り、縮小しても読めるか確認します。レトロ印刷風からシンプルな情報整理型まで対応します。</p>
+              <p>スマホでも読みやすい文字・配色・余白で制作します。</p>
               <a class="more" href="#works-banners">作品例を見る →</a>
             </div>
           </article>
@@ -925,177 +934,73 @@
         </div>
 
         <section class="craft-section" id="lp-process" aria-labelledby="lp-process-title">
-          <p class="craft-eyebrow">制作の進め方｜Web・LP</p>
-          <h3 id="lp-process-title">デザインより導線を意識したページ作りを心がけています。</h3>
-          <p>LPで先に決めるのは見た目ではなく、誰がどこから来て、どんな疑問を解消し、最後にどの行動を選ぶのか。読者が納得できる情報の順番と、無理のないCTAへの流れを設計してから文章とデザインを整えます。検索流入と広告流入では、見せる情報も導線も変えます。</p>
+          <p class="craft-eyebrow">サイト・LP制作について</p>
+          <h3 id="lp-process-title">伝えたい情報を整理し、行動につながるページを制作します。</h3>
+          <p>文章・見出し・導線に加え、SEOやスマホでの読みやすさも考えて仕上げます。</p>
           <div class="craft-build" aria-labelledby="chat-only-build-title">
-            <p class="craft-eyebrow">制作実例｜ChatGPTのみでWeb・LPを構築</p>
-            <h4 id="chat-only-build-title">ChatGPTのチャットだけでも、サイトを組み立てます。</h4>
-            <p>「飲食の仕事」と「佐藤の転職情報LP」は、ChatGPTのチャットだけで、企画・ライティング設計・サイト構築・デザイン・画像配置・LP公開まで一貫して制作した例です。目的・構成・コピーを会話で詰め、HTML/CSSなどの実装を組み立てながら、レイアウトや文章、導線の気になる点をその都度修正しました。</p>
-            <p>AIに一度依頼して完成を待つのではなく、何を作るかを分解し、細かな変更を重ねる進め方です。もちろんCodexやClaude Codeを使用した制作・実装にも対応しています。案件に合わせてツールを使い分け、完成形は自分で判断します。</p>
+            <h4 id="chat-only-build-title">ChatGPTのチャットからサイト制作まで。</h4>
+            <p>「飲食の仕事」「佐藤の転職情報LP」は、ChatGPTのチャットで企画・文章・デザイン・実装・公開まで制作しました。Claude Code・Codexも使用しています。</p>
           </div>
-          <div class="craft-priority">
-            <h4>「AIっぽさ」を消すデザインにも対応。ただし目的は、見栄えを整えることだけではありません。</h4>
-            <p>量産的なSaaS風レイアウト、意味のない英字ラベルや飾り数字、抽象的なコピー、過剰なグラデーションや装飾を見直し、案件の世界観に合う余白・書体・写真・レイアウトへ調整します。一方で、どれほどデザインが美しくても、読者が次の行動を選べなければLPの役割を果たせません。<strong>「理解→納得→行動」まで迷わず進める導線</strong>を優先しています。</p>
-          </div>
-          <ol class="craft-steps">
-            <li><strong>01｜目的と読者・出口を決める</strong><span>検索・SNS・広告などの流入元から、読者の疑問・必要な情報・最終的なCTAまでを先に設計する。</span></li>
-            <li><strong>02｜事実と素材を調べる</strong><span>公式資料・商品条件・利用の流れ・一次情報を照合。実績、意見、仮説、創作を混ぜない。</span></li>
-            <li><strong>03｜文章と構成を先に作る</strong><span>ファーストビュー、見出し、本文、CTAを複数案から検討。先に原稿の筋道を通す。</span></li>
-            <li><strong>04｜デザインと素材を決める</strong><span>世界観、書体、余白、写真や動画を設計。AI的な画一レイアウトを避け、装飾よりも読みやすさと導線の明確さを優先する。</span></li>
-            <li><strong>05｜実装して読み心地を確かめる</strong><span>HTML/CSS等で形にし、スマートフォンで読み順・CTA・文字サイズ・表示速度を確認。</span></li>
-            <li><strong>06｜公開前の検査と修正</strong><span>誤記、リンク、必須表記、画像、レスポンシブ表示を確認。最後は自分の目で文章と画面を整える。</span></li>
-          </ol>
-          <div class="craft-two">
-            <div>
-              <h4>ライティングで気をつけること</h4>
-              <p><strong>冒頭で相手の疑問に答える。</strong>「驚きの」「次世代」といった抽象的な宣伝語より、具体的な悩み・場面・特徴から書き始めます。</p>
-              <p><strong>見出しだけでも話が追える。</strong>読者が途中から見ても理解できるよう、一段落に話題を詰め込まず、結論・理由・具体例を整理します。</p>
-              <p><strong>行動まで自然につなぐ。</strong>読者の迷いに先回りして条件や注意点を示し、CTAでは「押すと何が起きるか」を明確にします。</p>
-            </div>
-            <div>
-              <h4>SEOを意識した設計</h4>
-              <p><strong>検索意図から情報を選ぶ。</strong>想定キーワードだけを繰り返さず、検索する人が知りたい答え・比較点・次の疑問を見出しと本文に反映します。</p>
-              <p><strong>ページの骨格を整える。</strong>内容に合うタイトル・見出し階層・meta description、適切な内部リンク、画像の代替テキストを検討します。</p>
-              <p><strong>スマホと表示品質を確かめる。</strong>画像の重さや読みやすさ、情報の更新性も確認。検索順位を保証するものではなく、読み手と検索エンジンの双方が理解しやすいページを目指します。</p>
-            </div>
-          </div>
-          <p class="craft-footnote">制作領域を問わず、要件と素材が揃う案件は着手から最短1日で納品前の最終確認まで進めることを目指しています。制作範囲が大きい案件、外部確認・追加修正が必要な案件は個別に納期を調整します。AIの出力は自分で確認・修正し、SEO施策の効果や検索順位は保証しません。</p>
         </section>
       </section>
 
       <section id="video-works" aria-label="動画・台本の制作例">
         <h3 class="sub-head" id="works-plots">YouTube長尺動画作例｜企画・構成・映像制作</h3>
         <article class="plot-sample long-film-sample" aria-labelledby="sample-plot-title">
-          <p class="sample-label">自主制作／創作ストーリー／企画・台本・映像演出</p>
+          <p class="sample-label">自主制作／創作ストーリー／5分8秒・横型</p>
           <h4 id="sample-plot-title">既読のまま、三ヶ月。</h4>
-          <p class="plot-intro">5分8秒／1920×1080／24fps／横型の長尺ストーリー動画</p>
-          <p><a href="https://hoyu.pages.dev/" target="_blank" rel="noopener noreferrer">あかりの恋愛相談LP</a>に掲載したストーリーの動画版です。</p>
-          <p>3ヶ月間、既読のまま返事を待っている人の夜を描く物語です。視聴者の共感から入り、タロットの一枚をきっかけに「相手は戻ってくるのか」から「私はどうしたいのか」へ問いを転換。最後は物語の中で意味を持った灯りを、夜間受付の案内へつなげています。</p>
+          <p>返事を待つ夜を描いた、<a href="https://hoyu.pages.dev/" target="_blank" rel="noopener noreferrer">あかりの恋愛相談LP</a>のストーリー動画です。</p>
           <div class="long-video-layout">
             <div class="long-video-player">
               <iframe src="https://drive.google.com/file/d/1SzRecxo6ZHmowUQtJk7WpcKipqI3Shd-/preview" title="長尺動画作例「既読のまま、三ヶ月。」" width="1920" height="1080" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
-            <div class="long-video-notes">
-              <h5>台本と映像を一体で設計する</h5>
-              <p><strong>秒単位の演出台本。</strong>ナレーションの実測尺に合わせて、字幕・場面転換・効果音の時刻を調整。音声は1文ずつ管理しています。</p>
-              <p><strong>動かす場面を選ぶ。</strong>スマホが光る、箱を開ける、ランプが灯る、という要所の動画を制作。静止画にもカメラ移動や光の演出を加えて一本にまとめています。</p>
-              <p><strong>青から琥珀へ。</strong>孤独な夜の青い光から、カードを見つけたあとの暖かな光へ。色と音で感情の移り変わりを表現しています。</p>
-            </div>
           </div>
-          <section class="plot-scene" aria-labelledby="long-film-structure">
-            <h5 id="long-film-structure">全8章の構成｜5分8秒の視聴体験を設計</h5>
-            <ol class="story-map">
-              <li><span class="story-time">0:01–0:28</span><div><strong>01｜冒頭のフック</strong><span>「既読のまま、三ヶ月。」と午前2時14分。暗い部屋のスマホの光で、返信を待つ夜を描く。</span></div></li>
-              <li><span class="story-time">0:29–1:02</span><div><strong>02｜共感の積み重ね</strong><span>朝・仕事の休憩・お風呂上がり。何度も通知を確認する反復で、待ち続ける時間を体感させる。</span></div></li>
-              <li><span class="story-time">1:04–1:54</span><div><strong>03｜出来事を起こす</strong><span>眠れない夜の片付けで、棚の奥のタロットの箱を発見。物語の方向を変えるきっかけを作る。</span></div></li>
-              <li><span class="story-time">1:55–2:18</span><div><strong>04｜カードを開示</strong><span>間を取って「吊るされた男」を見せる。反転後の静寂で、主人公が自分に重ねる瞬間を残す。</span></div></li>
-              <li><span class="story-time">2:19–3:09</span><div><strong>05｜問いの反転</strong><span>「あの人は、戻ってくるの？」から「私は、いつまでここで待つつもりなんだろう」へ。問いの主語を変える。</span></div></li>
-              <li><span class="story-time">3:11–3:45</span><div><strong>06｜変化を示す</strong><span>78枚のカードを学ぶ時間を描き、ただの気づきではなく、その後の行動へつなげる。</span></div></li>
-              <li><span class="story-time">3:46–4:38</span><div><strong>07｜世界観の提示</strong><span>夜になると戻ってくる感情に語りかける。ランプが灯る映像で「夜間受付」の意味を伝える。</span></div></li>
-              <li><span class="story-time">4:42–5:08</span><div><strong>08｜案内と余韻</strong><span>夜に聴ける音声への案内から、決め台詞「その恋、一旦お預かりします。」へつなげる。</span></div></li>
-            </ol>
-          </section>
-          <details class="plot-details">
-            <summary>台本・演出の具体例を見る</summary>
-            <div class="detail-body">
-              <section class="plot-scene" aria-labelledby="long-film-hook">
-                <h5 id="long-film-hook">冒頭｜短い言葉と時刻で情景を作る</h5>
-                <p class="plot-dialogue">「既読のまま、三ヶ月。」<br>「午前2時14分。」</p>
-                <p>0秒目にサムネイルを置き、約0.9秒から本編へ溶け、約2秒で題字を出します。説明を並べず、暗い部屋とスマートフォンの冷たい光だけで状況を伝えます。</p>
-              </section>
-              <section class="plot-scene" aria-labelledby="long-film-pivot">
-                <h5 id="long-film-pivot">中盤｜相手への問いを自分への問いに変える</h5>
-                <p class="plot-dialogue">「あの人は、戻ってくるの？」</p>
-                <p>「吊るされた男」のカードを開いたあと、次の問いに変わります。</p>
-                <p class="plot-dialogue">「私は、いつまでここで待つつもりなんだろう」</p>
-                <p>相手の本心や未来を断定せず、主人公が自分の気持ちへ目を向ける転換点として設計しています。</p>
-              </section>
-              <section class="plot-scene" aria-labelledby="long-film-ending">
-                <h5 id="long-film-ending">終盤｜映像の意味を残したままCTAへ</h5>
-                <p>ランプが灯るシーンを挟み、物語の余韻を切らずに「夜間受付」の紹介へ移行。決め台詞では暗転後の文字演出と声を合わせています。</p>
-                <p class="plot-dialogue">「その恋、一旦お預かりします。」</p>
-              </section>
-            </div>
-          </details>
-          <section class="plot-scene" aria-labelledby="long-film-workflow">
-            <h5 id="long-film-workflow">制作方法｜企画・台本から完成動画まで</h5>
-            <div class="plot-craft">
-              <div><strong>01｜物語の設計</strong><p>対象者の情景、冒頭の引き、転換点、結末と案内の意味を先に整理する。</p></div>
-              <div><strong>02｜秒数付き台本</strong><p>ナレーション・字幕・画面・間・効果音をタイムコードで結び、工程を分解する。</p></div>
-              <div><strong>03｜素材と映像演出</strong><p>既存の画像を活かし、必要な箇所だけ生成動画やカード反転演出を組み合わせる。</p></div>
-              <div><strong>04｜最終チェック</strong><p>文字の可読性、音と映像の同期、演出のつながりを確認し、版を重ねて仕上げる。</p></div>
-            </div>
-            <p class="sample-note">自らの制作工程を説明できる自主制作の創作動画です。YouTubeでの公開実績、視聴維持率、受託案件の納品実績として提示するものではありません。</p>
-          </section>
         </article>
 
         <h3 class="sub-head" id="works-short-scripts">ショート動画台本</h3>
         <article class="plot-sample" id="sample-short-script" aria-labelledby="sample-short-script-title">
-          <p class="sample-label">自主制作サンプル／40代美容ショート・台本から映像まで</p>
-          <h4 id="sample-short-script-title">18秒の中に、8つの役割を持たせます。</h4>
-          <p class="plot-intro">「シャンプー3本目」／8パート構成／4シーン／縦型ショート</p>
-          <p>ショート動画の台本は、冒頭で興味を引き、視聴者が続きも見たくなる流れを考えて作ります。視聴者が何を知りたくなり、どこで離れそうかを想像し、興味・共感・納得・行動を8つの役割に分けて構成します。</p>
+          <p class="sample-label">自主制作／美容ショート／17.97秒</p>
+          <h4 id="sample-short-script-title">「シャンプー3本目」</h4>
+          <div class="short-script-process" id="sample-short-script-process">
+            <h5>複数のAIで検討し、最後は自分で直します。</h5>
+            <p>題材・対象者・目的を決めたあと、切り口や冒頭の案を複数のAIで比べます。</p>
+          </div>
           <div class="short-script-feature">
             <figure class="short-script-video">
               <video src="assets/mtmwork-assets/short-3.mp4" poster="assets/mtmwork-assets/img-6.jpg" controls playsinline preload="metadata" aria-label="美容ショート「シャンプー3本目」の制作動画">
                 <a href="assets/mtmwork-assets/short-3.mp4">ショート動画を開く</a>
               </video>
-              <figcaption>制作動画｜シャンプー3本目（自主制作）</figcaption>
             </figure>
             <div class="short-script-thinking">
-              <h5>台本を作るときに意識していること</h5>
-              <p><strong>冒頭で対象者を伝えます。</strong>「40代」「シャンプー3本目」「洗う前の1分」を組み合わせ、誰に向けた動画か、なぜ今見るのかを示します。</p>
-              <p><strong>日常の動作から共感を作ります。</strong>「濡らして、すぐシャンプー」のように、映像にできる身近な場面を台本に入れます。</p>
-              <p><strong>置いた問いにきちんと答えます。</strong>最初の問いには役立つ情報を渡し、その後もう一度、冒頭の具体物に戻って結末を作ります。</p>
-              <p><strong>商品情報を事実と演出に分けます。</strong>商品の使い方や仕様は公式情報と照合し、未確認の使用体験や効果は断定しません。</p>
+              <h5>ナレーション台本</h5>
+              <ol class="script-raw">
+                <li><time>0:00–3:26</time><span>40代、シャンプー3本目の人、洗う前の1分見て！？</span></li>
+                <li><time>3:26–5:28</time><span>迷子の原因、洗う前に決まってるかも。</span></li>
+                <li><time>5:28–7:29</time><span>濡らして、すぐシャンプー。やりがちじゃない？</span></li>
+                <li><time>7:29–8:57</time><span>その前に、1分だけ。</span></li>
+                <li><time>8:57–11:20</time><span>お湯で予洗い。それから泡立てて、頭皮へ。</span></li>
+                <li><time>11:20–12:57</time><span>じゃあ、4本目を買うのはいつ？</span></li>
+                <li><time>12:57–13:93</time><span>これを1週間やってから。</span></li>
+                <li><time>13:93–17:97</time><span>頭皮用が気になるなら、haru kurokamiスカルプ。使い方はプロフから。</span></li>
+              </ol>
             </div>
           </div>
-          <details>
-            <summary>8パートそれぞれの役割を見る</summary>
-            <div class="detail-body">
-              <ol class="script-beats">
-                <li><strong>01｜フック</strong><span>「40代」「3本目」「洗う前の1分」で、対象者と動画を見る理由を冒頭で伝えます。</span></li>
-                <li><strong>02｜結論</strong><span>新しい商品を探す話から、洗う前の行動へ視点を切り替えます。</span></li>
-                <li><strong>03｜本文①</strong><span>「濡らして、すぐシャンプー」という日常の動作を描きます。</span></li>
-                <li><strong>04｜問い①</strong><span>「その前に、1分だけ」と置き、次に続く答えへの関心をつなぎます。</span></li>
-                <li><strong>05｜本文②</strong><span>予洗いと泡立ての手順を示し、直前の問いに答えます。</span></li>
-                <li><strong>06｜問い②</strong><span>3本のボトルに戻り、「4本目はいつ買いますか」と問いかけます。</span></li>
-                <li><strong>07｜本文③</strong><span>買い足す前に洗い方を見直す、という判断につなげます。期間を効果の保証にはしません。</span></li>
-                <li><strong>08｜CTA</strong><span>関連商品と使い方の確認先を案内します。PR表記も動画の内容に合わせます。</span></li>
-              </ol>
-              <p class="sample-note">「興味を引く → 視点を切り替える → 共感 → 問い → 答え → もう一度問い → 結末 → 次の行動」の順に構成します。問いを置いたら、直後に視聴者が求める答えを渡します。</p>
-            </div>
-          </details>
-          <section class="plot-scene" aria-labelledby="sample-short-script-process">
-            <h5 id="sample-short-script-process">複数のAIで検討し、最後は自分で直します。</h5>
-            <p>題材・対象者・目的を決めたあと、切り口や冒頭の案を複数のAIで比べます。展開の順番、言葉の強さ、説明の重なり、映像での伝わり方を自分で読み直し、台本を修正します。</p>
-            <p>台本にはパートごとの役割、秒数、ナレーション、画面の演出を書きます。ナレーションの長さも実際に確かめ、18秒・8パートを4シーンにまとめました。画像と音を組み合わせて映像にしたあと、字幕・音・テンポ・情報の正確さを見直します。</p>
-            <p class="sample-note">8パートはこの作例の設計です。視聴維持率や広告成果を保証するものではありません。掲載動画は自主制作です。</p>
-          </section>
         </article>
 
         <h3 class="sub-head" id="works-ttp">参考動画の演出を再構築した制作例</h3>
         <article class="plot-sample ttp-sample" aria-labelledby="ttp-sample-title">
-          <p class="sample-label">参考元の冒頭演出を研究した自主制作例／2ch風ショート</p>
-          <h4 id="ttp-sample-title">「卒業証書」冒頭6.87秒</h4>
-          <p>Premiere ProやAfter Effectsを使わず、<strong>Claude Codeで映像そのものを組み立てています。</strong> 参考動画から視聴者を止める演出の構造を読み取り、独自に用意した人物・背景・テロップ・音を組み合わせて再構築。素材を並べるだけでなく、表示位置・動き・タイミングまでコードで調整できる制作技術を示した作例です。</p>
+          <h4 id="ttp-sample-title">「卒業証書」｜6.87秒の自主制作</h4>
+          <p>Claude Codeで映像演出を再構築した作例です。</p>
           <div class="short-script-feature">
             <figure class="short-script-video">
-              <video src="assets/application/graduation.mp4" poster="assets/application/graduation.jpg" controls playsinline preload="metadata" aria-label="参考動画の演出を取り入れた「卒業証書」の自主制作ショート">
+              <video src="assets/application/graduation.mp4" poster="assets/application/graduation.jpg" controls playsinline preload="metadata" aria-label="卒業証書の自主制作ショート">
                 <a href="assets/application/graduation.mp4">動画を開く</a>
               </video>
-              <figcaption>自主制作・縦型 9:16／6.87秒</figcaption>
             </figure>
             <div class="short-script-thinking">
-              <h5>再現した要素と制作工程</h5>
-              <p><strong>冒頭と画面の流れを分析します。</strong>情報を出す順番、人物と背景の配置、場面転換、音の役割を確認します。</p>
-              <p><strong>映像をコードで制御します。</strong>画像・テロップを重ね、画面上の動きや切り替えを組み立てます。制作内容に応じて生成素材と既存素材を使い分けます。</p>
-              <p><strong>細かな修正にも対応します。</strong>文字の位置や大きさ、表示時間、場面転換や音のタイミングをコードで調整します。</p>
-              <p class="reference-video-action"><a class="reference-video-btn" href="https://www.youtube.com/shorts/P8z-8GQ-9P4" target="_blank" rel="noopener noreferrer">参考にしたYouTube Shortsを見る <span aria-hidden="true">↗</span></a></p>
+              <p class="reference-video-action"><a class="reference-video-btn" href="https://www.youtube.com/shorts/P8z-8GQ-9P4" target="_blank" rel="noopener noreferrer">参考動画を見る <span aria-hidden="true">↗</span></a></p>
             </div>
           </div>
-          <p class="sample-note">参考元の演出を研究して組み直した自主制作です。元動画の素材や制作実績ではありません。</p>
         </article>
 
         <h3 class="sub-head" id="works-shorts">ショート動画作例</h3>
@@ -1144,11 +1049,6 @@
 
       <section id="design-works" aria-label="バナー・SNS画像の制作例">
         <h3 class="sub-head" id="works-banners">バナー・SNS画像</h3>
-        <div class="banner-thinking">
-          <h4>見た目より先に、何を一番に読んでもらうか、を重視して制作します。</h4>
-          <p>想定する閲覧者と掲載場所を決め、最初に見える見出し、補助情報、余白の順に組み立てます。基本パレットは3色以内、書体は2種類以内。文字は左揃え、端から40px以上を目安に、見出しと補助文字に約3倍の強弱をつけます。</p>
-          <p>一枚のメッセージは最大3つまで。グラデーションや影に頼らず、情報のまとまり・字間・改行・写真と文字の関係を調整します。仕上げはスマホ相当の縮小表示でも確認します。</p>
-        </div>
         <div class="gallery">
           <figure class="g-item">
             <img src="assets/mtmwork-assets/img-7.jpg" alt="カフェのSNS投稿画像の作例です" loading="lazy" />
@@ -1161,7 +1061,7 @@
           <figure class="g-item banner-wide" id="banner-retro-sample">
             <img src="assets/mtmwork-assets/banner-retro-bookcoffee.webp" alt="古本と珈琲。クリーム色の古紙に深い青緑と朱色の2色インクを重ね、読書する人物を版画・網点印刷風に描いた横長バナー" width="1672" height="941" loading="lazy" />
             <figcaption>古本と珈琲｜レトロ印刷風・横長バナー</figcaption>
-            <p>架空の読書会を題材にした自主制作例。古紙の質感、網点、インクのかすれを使い、見出しと人物を左右に分けて情報の優先順位を付けました。実在イベントの広告ではありません。</p>
+
           </figure>
         </div>
       </section>
@@ -1173,7 +1073,6 @@
         </div>
         <div class="about">
           <p>飲食店のキッチンで働きながら、副業でサイト・動画・画像の制作をしています。</p>
-          <p>AIらしい見た目を調整する技術以上に、読者の理解から問い合わせ・相談などの行動へつながる導線設計を重視しています。文章と画面は自分で確認し、必要な修正を行います。</p>
           <p>動画・SNS制作は継続的なご依頼を中心に、サイト・LP制作は単発のご相談にも対応します。ご連絡は、ご利用中のサービスのメッセージ機能からお願いします。</p>
           <dl class="about-list">
             <div class="about-row">
