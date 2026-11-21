@@ -830,23 +830,14 @@
       .long-script-dialogue { font-family: var(--f-head); font-size: 17px; line-height: 1.85; margin: 0 0 8px !important; }
       .long-script-stage { font-size: 13px; color: var(--c-text-sub); line-height: 1.8; margin: 0 0 10px !important; }
 
-      .long-full-script { margin-top: 24px; padding-top: 23px; border-top: 1px solid var(--c-rule); }
-      .long-full-script h5 { font-family: var(--f-head); font-size: 18px; margin: 0 0 8px; color: var(--c-text); }
-      .long-full-script-intro { font-size: 13px; color: var(--c-text-sub); margin: 0 0 12px !important; }
-      .long-script-chapter { padding-top: 14px; }
-      .long-script-chapter h6 { font-family: var(--f-head); color: var(--c-accent); font-size: 16px; line-height: 1.65; margin: 18px 0 10px; }
-      .long-script-line { display: grid; grid-template-columns: 125px minmax(0,1fr); gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--c-rule); }
-      .long-script-line time { color: var(--c-accent); font-size: 12px; font-weight: 600; line-height: 1.75; font-variant-numeric: tabular-nums; }
-      .long-script-content { min-width: 0; }
-      .long-script-spoken { margin: 0 0 5px !important; font-size: 15px; color: var(--c-text); line-height: 1.75; }
-      .long-script-direction, .long-script-visual { font-size: 12px; color: var(--c-text-sub); line-height: 1.65; margin: 0 0 3px !important; overflow-wrap: anywhere; }
-      .long-script-technical { margin-top: 22px; border: 1px solid var(--c-rule); }
-      .long-script-technical summary { cursor: pointer; font-weight: 600; padding: 13px 16px; }
-      .long-script-technical-body { padding: 0 17px 16px; }
-      .long-script-technical-body h6 { font-size: 15px; margin: 16px 0 8px; }
-      .long-script-technical-body ul { padding-left: 1.3em; margin: 0; }
-      .long-script-technical-body li { font-size: 13px; margin: 4px 0; }
-      @media (max-width:599px) { .long-script-line { grid-template-columns: 1fr; gap: 2px; } .long-script-line time { font-size: 11px; } }
+      .long-full-script { margin-top: 24px; padding-top: 22px; border-top: 1px solid var(--c-rule); }
+      .long-full-script h5 { font-family: var(--f-head); font-size: 18px; margin: 0 0 16px; }
+      .long-script-chapter { padding: 15px 0 22px; border-bottom: 1px solid var(--c-rule); }
+      .long-script-chapter h6 { font-family: var(--f-head); font-size: 16px; color: var(--c-accent); margin: 8px 0 15px; line-height: 1.6; }
+      .long-script-voice p { font-size: 15px; line-height: 1.8; margin: 0 0 5px !important; }
+      .long-script-effect { font-size: 13px; line-height: 1.7; color: var(--c-text-sub); margin: 18px 0 0 !important; padding-left: 12px; border-left: 2px solid var(--c-rule); }
+      .long-script-effect strong { color: var(--c-accent); margin-right: 5px; }
+
     </style>
   </head>
   <body>
@@ -989,105 +980,119 @@
           </div>
           
           <section class="long-full-script" id="long-film-script" aria-labelledby="long-film-script-title">
-            <h5 id="long-film-script-title">演出台本全文｜全8章・5分8秒</h5>
-            <p class="long-full-script-intro">ナレーション・秒数・読み方・映像指示を掲載しています。</p>
+            <h5 id="long-film-script-title">台本全文｜全8章</h5>
             <div class="long-script-chapter">
-              <h6>1｜既読のまま三ヶ月（0:01.10〜）</h6>
-              <div class="long-script-line"><time>0:01.10–0:04.05</time><div class="long-script-content"><p class="long-script-spoken">既読のまま、三ヶ月。</p><p class="long-script-direction">間1.2秒・低く・静か。題を置くだけ</p><p class="long-script-visual">S01 生成動画A スマホの光（GrokBot）・blue・phoneGlow</p></div></div>
-              <div class="long-script-line"><time>0:05.25–0:08.60</time><div class="long-script-content"><p class="long-script-spoken">午前2時14分。</p><p class="long-script-direction">間0.7秒・時刻を置く</p><p class="long-script-visual">S02 ストーリー01 午前2時14分・blue・windowFlicker・phoneGlow</p></div></div>
-              <div class="long-script-line"><time>0:09.30–0:13.33</time><div class="long-script-content"><p class="long-script-spoken">暗い部屋で、スマホの画面だけが光っていました。</p><p class="long-script-direction">間0.8秒・孤独</p><p class="long-script-visual">S02 ストーリー01 午前2時14分・blue・windowFlicker・phoneGlow</p></div></div>
-              <div class="long-script-line"><time>0:14.13–0:17.23</time><div class="long-script-content"><p class="long-script-spoken">開いていたのは、LINEのトーク画面。</p><p class="long-script-direction">間0.5秒・</p><p class="long-script-visual">S03 ストーリー01 午前2時14分・blue・phoneGlow・chatBubble</p></div></div>
-              <div class="long-script-line"><time>0:17.73–0:22.14</time><div class="long-script-content"><p class="long-script-spoken">最後のメッセージは、私が送った「おやすみ」</p><p class="long-script-direction">間1.0秒・少し間をためる</p><p class="long-script-visual">S03 ストーリー01 午前2時14分・blue・phoneGlow・chatBubble</p></div></div>
-              <div class="long-script-line"><time>0:23.14–0:24.51</time><div class="long-script-content"><p class="long-script-spoken">既読。</p><p class="long-script-direction">間0.9秒・短く落とす</p><p class="long-script-visual">S03 ストーリー01 午前2時14分・blue・phoneGlow・chatBubble</p></div></div>
-              <div class="long-script-line"><time>0:25.41–0:27.45</time><div class="long-script-content"><p class="long-script-spoken">そのまま、三ヶ月。</p><p class="long-script-direction">間1.6秒・沈む</p><p class="long-script-visual">S04 ストーリー02 何度も確認する毎日・night・windowFlicker</p></div></div>
-            </div>
-            <div class="long-script-chapter">
-              <h6>2｜返事を待ち続ける日常（0:29.05〜）</h6>
-              <div class="long-script-line"><time>0:29.05–0:31.93</time><div class="long-script-content"><p class="long-script-spoken">朝起きたら、まず通知を確認する。</p><p class="long-script-direction">間0.5秒・淡々と（反復のリズム）</p><p class="long-script-visual">S05 ストーリー02 何度も確認する毎日・morning・tapFlash</p></div></div>
-              <div class="long-script-line"><time>0:32.43–0:35.54</time><div class="long-script-content"><p class="long-script-spoken">仕事の休憩中にも、こっそり確認する。</p><p class="long-script-direction">間0.5秒・淡々と</p><p class="long-script-visual">S06 ストーリー02 何度も確認する毎日・day・tapFlash</p></div></div>
-              <div class="long-script-line"><time>0:36.04–0:38.77</time><div class="long-script-content"><p class="long-script-spoken">お風呂から上がったら、また確認する。</p><p class="long-script-direction">間1.0秒・淡々と</p><p class="long-script-visual">S07 ストーリー02 何度も確認する毎日・night・tapFlash・windowFlicker</p></div></div>
-              <div class="long-script-line"><time>0:39.77–0:41.81</time><div class="long-script-content"><p class="long-script-spoken">来ていないことは、わかっていました。</p><p class="long-script-direction">間0.6秒・共感</p><p class="long-script-visual">S08 ストーリー01 午前2時14分・blue・phoneGlow・phoneFlare</p></div></div>
-              <div class="long-script-line"><time>0:42.41–0:46.21</time><div class="long-script-content"><p class="long-script-spoken">それでも指は、勝手に画面を開いてしまうんです。</p><p class="long-script-direction">間1.2秒・共感</p><p class="long-script-visual">S08 ストーリー01 午前2時14分・blue・phoneGlow・phoneFlare</p></div></div>
-              <div class="long-script-line"><time>0:47.41–0:50.28</time><div class="long-script-content"><p class="long-script-spoken">「もう忘れよう」</p><p class="long-script-direction">間0.7秒・小さく</p><p class="long-script-visual">S09 ストーリー02 何度も確認する毎日・night</p></div></div>
-              <div class="long-script-line"><time>0:50.98–0:54.86</time><div class="long-script-content"><p class="long-script-spoken">何度そう決めたか、数えるのはやめました。</p><p class="long-script-direction">間0.6秒・</p><p class="long-script-visual">S09 ストーリー02 何度も確認する毎日・night</p></div></div>
-              <div class="long-script-line"><time>0:55.46–1:02.46</time><div class="long-script-content"><p class="long-script-spoken">決めた次の日の夜には、また「あの人、元気かな」と考えている自分がいたから。</p><p class="long-script-direction">間1.8秒・章の終わり・沈む</p><p class="long-script-visual">S09b ストーリー02 何度も確認する毎日・night・windowFlicker</p></div></div>
-            </div>
-            <div class="long-script-chapter">
-              <h6>3｜夜中の片付けと箱の発見（1:04.26〜）</h6>
-              <div class="long-script-line"><time>1:04.26–1:06.91</time><div class="long-script-content"><p class="long-script-spoken">ある夜、どうしても眠れなくて。</p><p class="long-script-direction">間0.6秒・場面が変わる</p><p class="long-script-visual">S10 ストーリー03 棚の奥のタロット・dimWarm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>1:07.51–1:11.00</time><div class="long-script-content"><p class="long-script-spoken">気を紛らわせようと、部屋の片付けを始めました。</p><p class="long-script-direction">間0.9秒・</p><p class="long-script-visual">S10 ストーリー03 棚の奥のタロット・dimWarm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>1:11.90–1:15.00</time><div class="long-script-content"><p class="long-script-spoken">棚の奥から出てきたのは、小さな箱。</p><p class="long-script-direction">間1.2秒・発見</p><p class="long-script-visual">S10 ストーリー03 棚の奥のタロット・dimWarm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>1:16.20–1:19.46</time><div class="long-script-content"><p class="long-script-spoken">学生の頃、友達と行った雑貨屋さんで、</p><p class="long-script-direction">間0.2秒・思い出す</p><p class="long-script-visual">S12 追加01 箱を見つける・memory・memoryHaze</p></div></div>
-              <div class="long-script-line"><time>1:19.66–1:23.68</time><div class="long-script-content"><p class="long-script-spoken">「絵がきれいだから」という理由だけで買ったタロットでした。</p><p class="long-script-direction">間0.9秒・</p><p class="long-script-visual">S12 追加01 箱を見つける・memory・memoryHaze</p></div></div>
-              <div class="long-script-line"><time>1:24.58–1:31.80</time><div class="long-script-content"><p class="long-script-spoken">結局、説明書を少し読んだだけで、一度もちゃんと使わないまま、しまい込んでいたもの。</p><p class="long-script-direction">間0.9秒・</p><p class="long-script-visual">S12b ストーリー03 棚の奥のタロット・memory・memoryHaze</p></div></div>
-              <div class="long-script-line"><time>1:32.70–1:35.73</time><div class="long-script-content"><p class="long-script-spoken">いつもなら、そのまま棚に戻していたと思います。</p><p class="long-script-direction">間0.8秒・</p><p class="long-script-visual">S13 追加01 箱を見つける・warm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>1:36.53–1:40.83</time><div class="long-script-content"><p class="long-script-spoken">でもその夜の私は、誰かに聞いてほしかったんです。</p><p class="long-script-direction">間0.7秒・本音</p><p class="long-script-visual">S13 追加01 箱を見つける・warm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>1:41.53–1:45.63</time><div class="long-script-content"><p class="long-script-spoken">友達にはもう、同じ話を何度もしてしまっていたから。</p><p class="long-script-direction">間0.5秒・</p><p class="long-script-visual">S13b 追加01 箱を見つける・warmDim</p></div></div>
-              <div class="long-script-line"><time>1:46.13–1:50.91</time><div class="long-script-content"><p class="long-script-spoken">「まだ言ってるの？」と思われるのが怖くて、これ以上は話せなかった。</p><p class="long-script-direction">間1.1秒・涙の手前</p><p class="long-script-visual">S13b 追加01 箱を見つける・warmDim</p></div></div>
-              <div class="long-script-line"><time>1:52.01–1:53.97</time><div class="long-script-content"><p class="long-script-spoken">だから、箱を開けました。</p><p class="long-script-direction">間1.6秒・決める</p><p class="long-script-visual">S14 生成動画B 箱を開く（GrokBot）・warm</p></div></div>
-            </div>
-            <div class="long-script-chapter">
-              <h6>4｜吊るされた男との出会い（1:55.58〜）</h6>
-              <div class="long-script-line"><time>1:55.58–1:58.07</time><div class="long-script-content"><p class="long-script-spoken">占い師でもない、ただの私が、</p><p class="long-script-direction">間0.3秒・</p><p class="long-script-visual">S14 生成動画B 箱を開く（GrokBot）・warm</p></div></div>
-              <div class="long-script-line"><time>1:58.37–2:02.08</time><div class="long-script-content"><p class="long-script-spoken">初めて自分のためにカードを一枚めくった夜です。</p><p class="long-script-direction">間2.0秒・息をのむ（ここで反転の溜め）</p><p class="long-script-visual">S15 タロット反転エフェクト v1（裏→吊るされた男・採用済み）・warm・cardLight</p></div></div>
-              <div class="long-script-line"><time>2:04.08–2:06.27</time><div class="long-script-content"><p class="long-script-spoken">出てきたのは「吊るされた男」。</p><p class="long-script-direction">間1.6秒・驚き（反転の直後に静寂）</p><p class="long-script-visual">S15 タロット反転エフェクト v1（裏→吊るされた男・採用済み）・warm・cardLight</p></div></div>
-              <div class="long-script-line"><time>2:07.87–2:12.04</time><div class="long-script-content"><p class="long-script-spoken">逆さまに吊られて、動けずに、ただそこにいる人。</p><p class="long-script-direction">間1.2秒・</p><p class="long-script-visual">S16 正式カード 吊るされた男（表）・warm・cardLight</p></div></div>
-              <div class="long-script-line"><time>2:13.24–2:14.37</time><div class="long-script-content"><p class="long-script-spoken">笑ってしまいました。</p><p class="long-script-direction">間0.6秒・力が抜ける</p><p class="long-script-visual">S17 正式カード 吊るされた男（表）・warm・cardLight・breath</p></div></div>
-              <div class="long-script-line"><time>2:14.97–2:17.63</time><div class="long-script-content"><p class="long-script-spoken">だって、あまりにも私だったから。</p><p class="long-script-direction">間2.0秒・章の終わり</p><p class="long-script-visual">S17 正式カード 吊るされた男（表）・warm・cardLight・breath</p></div></div>
-            </div>
-            <div class="long-script-chapter">
-              <h6>5｜問いの変化（2:19.63〜）</h6>
-              <div class="long-script-line"><time>2:19.63–2:24.19</time><div class="long-script-content"><p class="long-script-spoken">それまでの私の頭の中は、ずっとひとつの問いでした。</p><p class="long-script-direction">間0.9秒・</p><p class="long-script-visual">S18 ストーリー01 午前2時14分・blueDeep・phoneGlow</p></div></div>
-              <div class="long-script-line"><time>2:25.09–2:27.06</time><div class="long-script-content"><p class="long-script-spoken">「あの人は、戻ってくるの？」</p><p class="long-script-direction">間1.6秒・問い①</p><p class="long-script-visual">S18 ストーリー01 午前2時14分・blueDeep・phoneGlow</p></div></div>
-              <div class="long-script-line"><time>2:28.66–2:34.20</time><div class="long-script-content"><p class="long-script-spoken">でも、そのカードを見ていたら、初めて違う問いが浮かんだんです。</p><p class="long-script-direction">間1.4秒・気づきの溜め</p><p class="long-script-visual">S19 正式カード 吊るされた男（表）・warm・cardLight</p></div></div>
-              <div class="long-script-line"><time>2:35.60–2:38.56</time><div class="long-script-content"><p class="long-script-spoken">「私は、いつまでここで待つつもりなんだろう」</p><p class="long-script-direction">間2.2秒・問いの反転（最大の山）</p><p class="long-script-visual">S20 正式カード 吊るされた男（表）・warmBlur</p></div></div>
-              <div class="long-script-line"><time>2:40.76–2:45.24</time><div class="long-script-content"><p class="long-script-spoken">カードは、あの人の気持ちを教えてくれたわけじゃありません。</p><p class="long-script-direction">間0.5秒・</p><p class="long-script-visual">S21 ストーリー03 棚の奥のタロット・warm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>2:45.74–2:48.77</time><div class="long-script-content"><p class="long-script-spoken">返事が来る日も、教えてくれませんでした。</p><p class="long-script-direction">間0.9秒・</p><p class="long-script-visual">S21 ストーリー03 棚の奥のタロット・warm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>2:49.67–2:52.33</time><div class="long-script-content"><p class="long-script-spoken">ただ、ずっと相手ばかり見ていた私に、</p><p class="long-script-direction">間0.3秒・</p><p class="long-script-visual">S22 正式カード 吊るされた男（表）・warm・cardLight</p></div></div>
-              <div class="long-script-line"><time>2:52.63–2:57.26</time><div class="long-script-content"><p class="long-script-spoken">「あなた自身はどうしたいの？」と聞いてきた。</p><p class="long-script-direction">間1.6秒・理解</p><p class="long-script-visual">S22 正式カード 吊るされた男（表）・warm・cardLight</p></div></div>
-              <div class="long-script-line"><time>2:58.86–3:00.82</time><div class="long-script-content"><p class="long-script-spoken">あの夜、泣いたのは、</p><p class="long-script-direction">間0.4秒・涙</p><p class="long-script-visual">S23 追加01 箱を見つける・blueToAmber・windowFlicker</p></div></div>
-              <div class="long-script-line"><time>3:01.22–3:02.89</time><div class="long-script-content"><p class="long-script-spoken">返事が来なかったからじゃなくて、</p><p class="long-script-direction">間0.4秒・涙</p><p class="long-script-visual">S23 追加01 箱を見つける・blueToAmber・windowFlicker</p></div></div>
-              <div class="long-script-line"><time>3:03.29–3:08.53</time><div class="long-script-content"><p class="long-script-spoken">自分の気持ちを三ヶ月ぶりに聞いてもらえた気がしたからです。</p><p class="long-script-direction">間2.4秒・涙・章の終わり</p><p class="long-script-visual">S23 追加01 箱を見つける・blueToAmber・windowFlicker</p></div></div>
-            </div>
-            <div class="long-script-chapter">
-              <h6>6｜78枚のカードを学ぶ（3:10.93〜）</h6>
-              <div class="long-script-line"><time>3:10.93–3:15.26</time><div class="long-script-content"><p class="long-script-spoken">それから、78枚のカードを一枚ずつ学びました。</p><p class="long-script-direction">間1.2秒・時間が流れる</p><p class="long-script-visual">S24 追加02 タロットを学ぶ夜・warm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>3:16.46–3:19.87</time><div class="long-script-content"><p class="long-script-spoken">恋には、待つことが正解のときもある。</p><p class="long-script-direction">間0.7秒・</p><p class="long-script-visual">S25 追加02 タロットを学ぶ夜・warm・pageSweep</p></div></div>
-              <div class="long-script-line"><time>3:20.57–3:24.13</time><div class="long-script-content"><p class="long-script-spoken">勇気を出して伝えることが必要なときもある。</p><p class="long-script-direction">間0.7秒・</p><p class="long-script-visual">S26 追加02 タロットを学ぶ夜・warm・pageSweep</p></div></div>
-              <div class="long-script-line"><time>3:24.83–3:29.99</time><div class="long-script-content"><p class="long-script-spoken">そして、手放すことが、自分を守る選択になるときもある。</p><p class="long-script-direction">間1.2秒・</p><p class="long-script-visual">S27 追加02 タロットを学ぶ夜・warm・pageSweep</p></div></div>
-              <div class="long-script-line"><time>3:31.19–3:35.90</time><div class="long-script-content"><p class="long-script-spoken">どれが正しいかは、人によって、時期によって違います。</p><p class="long-script-direction">間0.7秒・</p><p class="long-script-visual">S28 ストーリー03 棚の奥のタロット・warmDawn・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>3:36.60–3:44.59</time><div class="long-script-content"><p class="long-script-spoken">私はその違いを、急がずに一緒に読み解ける人になりたかった。</p><p class="long-script-direction">間2.0秒・温かさ・章の終わり</p><p class="long-script-visual">S28b 追加02 タロットを学ぶ夜・warmDawn・lampFlicker</p></div></div>
-            </div>
-            <div class="long-script-chapter">
-              <h6>7｜夜間受付が開く（3:46.59〜）</h6>
-              <div class="long-script-line"><time>3:46.59–3:52.14</time><div class="long-script-content"><p class="long-script-spoken">夜になると、昼間は平気なふりをしていた気持ちが出てきますよね。</p><p class="long-script-direction">間0.8秒・視聴者へ語りかけに変わる</p><p class="long-script-visual">S29 ストーリー01 午前2時14分・blue・phoneGlow</p></div></div>
-              <div class="long-script-line"><time>3:52.94–3:56.88</time><div class="long-script-content"><p class="long-script-spoken">ちゃんと仕事もした。笑って話もした。</p><p class="long-script-direction">間0.5秒・</p><p class="long-script-visual">S29b ストーリー02 何度も確認する毎日・day</p></div></div>
-              <div class="long-script-line"><time>3:57.38–4:03.23</time><div class="long-script-content"><p class="long-script-spoken">なのに、布団に入った瞬間、またあの人のことを考えている。</p><p class="long-script-direction">間1.2秒・</p><p class="long-script-visual">S29c ストーリー01 午前2時14分・blue・phoneGlow</p></div></div>
-              <div class="long-script-line"><time>4:04.43–4:08.38</time><div class="long-script-content"><p class="long-script-spoken">だから、私の受付は夜に開きます。</p><p class="long-script-direction">間1.8秒・ランプ点灯</p><p class="long-script-visual">S30 生成動画C ランプが灯る（GrokBot）・lampOn・lampSwell</p></div></div>
-              <div class="long-script-line"><time>4:10.18–4:11.53</time><div class="long-script-content"><p class="long-script-spoken">返事が来ない恋も。</p><p class="long-script-direction">間0.6秒・安心</p><p class="long-script-visual">S31 人物正本 琥珀ブラック・warm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>4:12.13–4:13.41</time><div class="long-script-content"><p class="long-script-spoken">忘れられない恋も。</p><p class="long-script-direction">間0.6秒・</p><p class="long-script-visual">S31b 人物正本 琥珀ブラック・warm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>4:14.01–4:15.69</time><div class="long-script-content"><p class="long-script-spoken">まだ終わらせたくない恋も。</p><p class="long-script-direction">間1.0秒・</p><p class="long-script-visual">S31c 人物正本 琥珀ブラック・warm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>4:16.69–4:20.63</time><div class="long-script-content"><p class="long-script-spoken">ここでは、無理に結論を出さなくて大丈夫です。</p><p class="long-script-direction">間1.6秒・安心</p><p class="long-script-visual">S32 人物正本 縦型（11月2日）・warm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>4:22.23–4:23.53</time><div class="long-script-content"><p class="long-script-spoken">あかりです。</p><p class="long-script-direction">間1.6秒・名乗り（現在のあかりの顔）</p><p class="long-script-visual">S33 人物正本 琥珀ブラック・warmReveal・bloom</p></div></div>
-              <div class="long-script-line"><time>4:25.13–4:30.76</time><div class="long-script-content"><p class="long-script-spoken">あの夜の私が、一枚のカードで少しだけ呼吸できたように。</p><p class="long-script-direction">間0.7秒・</p><p class="long-script-visual">S34 人物正本 琥珀ブラック・warm・lampFlicker</p></div></div>
-              <div class="long-script-line"><time>4:31.46–4:37.53</time><div class="long-script-content"><p class="long-script-spoken">今夜、あなたの恋のそばにも、小さな灯りを置けたらと思っています。</p><p class="long-script-direction">間4.5秒・余韻</p><p class="long-script-visual">S34b 人物正本 縦型（11月2日）・warm・lampFlicker</p></div></div>
-            </div>
-            <div class="long-script-chapter">
-              <h6>8｜視聴者の恋へつなぐ（案内）（4:42.03〜）</h6>
-              <div class="long-script-line"><time>4:42.03–4:45.13</time><div class="long-script-content"><p class="long-script-spoken">もし今夜、ひとりで抱えている恋があるなら。</p><p class="long-script-direction">間1.0秒・案内（追加文）</p><p class="long-script-visual">S35 人物正本 琥珀ブラック・warm</p></div></div>
-              <div class="long-script-line"><time>4:46.13–4:50.30</time><div class="long-script-content"><p class="long-script-spoken">今夜も、夜間受付は開いています。</p><p class="long-script-direction">間0.9秒・案内（追加文）・静かに</p><p class="long-script-visual">S35 人物正本 琥珀ブラック・warm</p></div></div>
-              <div class="long-script-line"><time>4:51.20–4:56.14</time><div class="long-script-content"><p class="long-script-spoken">まずは、眠れない夜に聴ける声と、琥珀の秘音を。</p><p class="long-script-direction">間4.0秒・案内（追加文）・手渡すように</p><p class="long-script-visual">S35 人物正本 琥珀ブラック・warm</p></div></div>
-              <div class="long-script-line"><time>5:00.14–5:03.78</time><div class="long-script-content"><p class="long-script-spoken">その恋、一旦お預かりします。</p><p class="long-script-direction">間0.0秒・決め台詞（暗転のあと）・静かに言い切る</p><p class="long-script-visual">S35 人物正本 琥珀ブラック・warm</p></div></div>
-            </div>
-            <details class="long-script-technical">
-              <summary>文字演出・効果音の指定も見る</summary>
-              <div class="long-script-technical-body">
-                <h6>大きく見せる文字</h6>
-                <ul><li>0:02.00–0:05.46 既読のまま、 / ［三ヶ月］</li><li>0:25.96–0:28.65 ［三ヶ月］</li><li>0:47.36–0:50.88 「もう忘れよう」</li><li>1:12.85–1:16.00 小さな［箱］</li><li>2:25.04–2:28.56 「あの人は、 / 戻ってくるの？」</li><li>2:35.50–2:40.56 「［私は］、いつまでここで / 待つつもりなんだろう」</li><li>2:52.58–2:58.46 「あなた自身は / ［どうしたいの？］」</li><li>3:11.83–3:16.26 ［78枚］</li><li>4:22.18–4:25.33 ［あかり］</li><li>4:59.84–5:08.28 その恋、一旦［お預かりします］</li></ul>
-                <h6>効果音</h6>
-                <ul><li>0:00.15 low_air（-14dB）</li><li>0:23.12 notification（-16dB）</li><li>0:31.23 double_tap（-20dB）</li><li>0:34.84 double_tap（-20dB）</li><li>0:38.07 double_tap（-20dB）</li><li>1:12.80 save_glint（-16dB）</li><li>1:52.61 box_open（-18dB）</li><li>2:02.73 tarot_whoosh（-15dB）</li><li>2:03.73 tarot_reveal（-13dB）</li><li>2:35.45 bell（-18dB）</li><li>3:16.36 page（-20dB）</li><li>3:20.47 page（-20dB）</li><li>3:24.73 page（-20dB）</li><li>4:04.93 lamp（-14dB）</li><li>4:05.13 golden_bloom（-20dB）</li><li>4:21.83 bell（-20dB）</li><li>4:59.54 bell（-18dB）</li></ul>
+              <h6>01｜既読のまま、三ヶ月。</h6>
+              <div class="long-script-voice">
+                <p>既読のまま、三ヶ月。</p>
+                <p>午前2時14分。</p>
+                <p>暗い部屋で、スマホの画面だけが光っていました。</p>
+                <p>開いていたのは、LINEのトーク画面。</p>
+                <p>最後のメッセージは、私が送った「おやすみ」</p>
+                <p>既読。</p>
+                <p>そのまま、三ヶ月。</p>
               </div>
-            </details>
+              <p class="long-script-effect"><strong>演出</strong> スマホの青い光、窓の明滅、トーク画面の表示。通知音。</p>
+            </div>
+            <div class="long-script-chapter">
+              <h6>02｜返事を待ち続ける日常</h6>
+              <div class="long-script-voice">
+                <p>朝起きたら、まず通知を確認する。</p>
+                <p>仕事の休憩中にも、こっそり確認する。</p>
+                <p>お風呂から上がったら、また確認する。</p>
+                <p>来ていないことは、わかっていました。</p>
+                <p>それでも指は、勝手に画面を開いてしまうんです。</p>
+                <p>「もう忘れよう」</p>
+                <p>何度そう決めたか、数えるのはやめました。</p>
+                <p>決めた次の日の夜には、また「あの人、元気かな」と考えている自分がいたから。</p>
+              </div>
+              <p class="long-script-effect"><strong>演出</strong> 朝・昼・夜の場面転換。通知確認に合わせた画面の光。</p>
+            </div>
+            <div class="long-script-chapter">
+              <h6>03｜夜中の片付けと箱の発見</h6>
+              <div class="long-script-voice">
+                <p>ある夜、どうしても眠れなくて。</p>
+                <p>気を紛らわせようと、部屋の片付けを始めました。</p>
+                <p>棚の奥から出てきたのは、小さな箱。</p>
+                <p>学生の頃、友達と行った雑貨屋さんで、</p>
+                <p>「絵がきれいだから」という理由だけで買ったタロットでした。</p>
+                <p>結局、説明書を少し読んだだけで、一度もちゃんと使わないまま、しまい込んでいたもの。</p>
+                <p>いつもなら、そのまま棚に戻していたと思います。</p>
+                <p>でもその夜の私は、誰かに聞いてほしかったんです。</p>
+                <p>友達にはもう、同じ話を何度もしてしまっていたから。</p>
+                <p>「まだ言ってるの？」と思われるのが怖くて、これ以上は話せなかった。</p>
+                <p>だから、箱を開けました。</p>
+              </div>
+              <p class="long-script-effect"><strong>演出</strong> 回想場面のぼかし、暖色の照明。箱を開く動きと効果音。</p>
+            </div>
+            <div class="long-script-chapter">
+              <h6>04｜吊るされた男との出会い</h6>
+              <div class="long-script-voice">
+                <p>占い師でもない、ただの私が、</p>
+                <p>初めて自分のためにカードを一枚めくった夜です。</p>
+                <p>出てきたのは「吊るされた男」。</p>
+                <p>逆さまに吊られて、動けずに、ただそこにいる人。</p>
+                <p>笑ってしまいました。</p>
+                <p>だって、あまりにも私だったから。</p>
+              </div>
+              <p class="long-script-effect"><strong>演出</strong> カードを裏返す演出と光。反転直後は静けさを残す。</p>
+            </div>
+            <div class="long-script-chapter">
+              <h6>05｜問いの変化</h6>
+              <div class="long-script-voice">
+                <p>それまでの私の頭の中は、ずっとひとつの問いでした。</p>
+                <p>「あの人は、戻ってくるの？」</p>
+                <p>でも、そのカードを見ていたら、初めて違う問いが浮かんだんです。</p>
+                <p>「私は、いつまでここで待つつもりなんだろう」</p>
+                <p>カードは、あの人の気持ちを教えてくれたわけじゃありません。</p>
+                <p>返事が来る日も、教えてくれませんでした。</p>
+                <p>ただ、ずっと相手ばかり見ていた私に、</p>
+                <p>「あなた自身はどうしたいの？」と聞いてきた。</p>
+                <p>あの夜、泣いたのは、</p>
+                <p>返事が来なかったからじゃなくて、</p>
+                <p>自分の気持ちを三ヶ月ぶりに聞いてもらえた気がしたからです。</p>
+              </div>
+              <p class="long-script-effect"><strong>演出</strong> 冷たい青から琥珀色へ移行。問いが変わる場面で光をにじませ、ベル音。</p>
+            </div>
+            <div class="long-script-chapter">
+              <h6>06｜78枚のカードを学ぶ</h6>
+              <div class="long-script-voice">
+                <p>それから、78枚のカードを一枚ずつ学びました。</p>
+                <p>恋には、待つことが正解のときもある。</p>
+                <p>勇気を出して伝えることが必要なときもある。</p>
+                <p>そして、手放すことが、自分を守る選択になるときもある。</p>
+                <p>どれが正しいかは、人によって、時期によって違います。</p>
+                <p>私はその違いを、急がずに一緒に読み解ける人になりたかった。</p>
+              </div>
+              <p class="long-script-effect"><strong>演出</strong> ページをめくる動きと効果音。夜明けのような暖色。</p>
+            </div>
+            <div class="long-script-chapter">
+              <h6>07｜夜間受付が開く</h6>
+              <div class="long-script-voice">
+                <p>夜になると、昼間は平気なふりをしていた気持ちが出てきますよね。</p>
+                <p>ちゃんと仕事もした。笑って話もした。</p>
+                <p>なのに、布団に入った瞬間、またあの人のことを考えている。</p>
+                <p>だから、私の受付は夜に開きます。</p>
+                <p>返事が来ない恋も。</p>
+                <p>忘れられない恋も。</p>
+                <p>まだ終わらせたくない恋も。</p>
+                <p>ここでは、無理に結論を出さなくて大丈夫です。</p>
+                <p>あかりです。</p>
+                <p>あの夜の私が、一枚のカードで少しだけ呼吸できたように。</p>
+                <p>今夜、あなたの恋のそばにも、小さな灯りを置けたらと思っています。</p>
+              </div>
+              <p class="long-script-effect"><strong>演出</strong> ランプ点灯、琥珀色の光。名前の文字を浮かび上がらせる。</p>
+            </div>
+            <div class="long-script-chapter">
+              <h6>08｜視聴者の恋へつなぐ</h6>
+              <div class="long-script-voice">
+                <p>もし今夜、ひとりで抱えている恋があるなら。</p>
+                <p>今夜も、夜間受付は開いています。</p>
+                <p>まずは、眠れない夜に聴ける声と、琥珀の秘音を。</p>
+                <p>その恋、一旦お預かりします。</p>
+              </div>
+              <p class="long-script-effect"><strong>演出</strong> 案内から暗転へ。最後の台詞に合わせて文字を灯し、余韻を残す。</p>
+            </div>
           </section>
         </article>
 
